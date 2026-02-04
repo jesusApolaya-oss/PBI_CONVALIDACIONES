@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "e9c9f52d37146d24a5a2",
+  "position": {
+    "x": 181.34278796968024,
+    "y": 91.800048828124957,
+    "z": 6000,
+    "height": 72,
+    "width": 196,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "SemCompletado"
+                }
+              },
+              "queryRef": "BBDD.SemCompletado",
+              "nativeQueryRef": "Semana",
+              "active": true,
+              "displayName": "Semana"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

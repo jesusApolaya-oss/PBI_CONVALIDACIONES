@@ -1,0 +1,11 @@
+expression Conex =
+		let
+		    Origen = SharePoint.Files("https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/", [ApiVersion = 15])
+		in
+		    Origen
+	lineageTag: 14427970-1981-4d84-bd65-1c04b3854567
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

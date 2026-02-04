@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Nuevo acceso directo.lnk"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "075a9595-e854-4690-8f36-6986a5931215"
+  }
+}

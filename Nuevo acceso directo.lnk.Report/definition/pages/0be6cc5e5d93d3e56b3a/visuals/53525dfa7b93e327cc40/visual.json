@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "53525dfa7b93e327cc40",
+  "position": {
+    "x": 917.7777777777776,
+    "y": 89.9999999999999,
+    "z": 3000,
+    "height": 62.222222222222221,
+    "width": 147.77777777777777,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "SLA_OFI"
+                }
+              },
+              "queryRef": "BBDD.SLA_OFI",
+              "nativeQueryRef": "SLA",
+              "active": true,
+              "displayName": "SLA"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

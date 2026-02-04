@@ -1,0 +1,50 @@
+table dim_EstadoConvalidacion
+	lineageTag: 405cc68e-8612-47f8-bf5d-124bc13488bd
+
+	column EstadoConvalidacion
+		dataType: string
+		lineageTag: 3bc5ce6a-93ec-47d2-85f2-805573c09e09
+		summarizeBy: none
+		sourceColumn: EstadoConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 47e0b43d-cda7-449e-ae39-efcba57ec484
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Estado Convalidacion'
+		dataType: int64
+		formatString: 0
+		lineageTag: f4e378ee-f326-4fc0-b03e-8400b2b2893b
+		summarizeBy: none
+		sourceColumn: ID Estado Convalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_EstadoConvalidacion = m
+		mode: import
+		source =
+				let
+				    TablaEstados = #table(
+				        {"EstadoConvalidacion", "Estado"},
+				        {
+				            {"PendienteSI", "Pendiente"},
+				            {"PendienteNO", "No Iniciado"},
+				            {"EnviadoSI", "Cerrado"},
+				            {"EnviadoNO", "Pend-Admisión"},
+				            {"Enviado", "Enviado"}
+				        }
+				    ),
+				    #"Índice agregado" = Table.AddIndexColumn(TablaEstados, "ID Estado Convalidacion", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

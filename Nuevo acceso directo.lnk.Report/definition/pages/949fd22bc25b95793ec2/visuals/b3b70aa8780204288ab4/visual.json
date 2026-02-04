@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b3b70aa8780204288ab4",
+  "position": {
+    "x": 165.3829456821905,
+    "y": 91.920530028513568,
+    "z": 0,
+    "height": 67.587327376116974,
+    "width": 150.77173030056866,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Carrera"
+                    }
+                  },
+                  "Property": "Responsable"
+                }
+              },
+              "queryRef": "dim_Carrera.Responsable",
+              "nativeQueryRef": "Grupo",
+              "active": true,
+              "displayName": "Grupo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

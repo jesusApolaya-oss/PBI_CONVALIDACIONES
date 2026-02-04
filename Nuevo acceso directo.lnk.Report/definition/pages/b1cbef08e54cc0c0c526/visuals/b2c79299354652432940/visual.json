@@ -1,0 +1,482 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b2c79299354652432940",
+  "position": {
+    "x": 16,
+    "y": 208,
+    "z": 0,
+    "height": 496,
+    "width": 944,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BBDD"
+                        }
+                      },
+                      "Property": "SLA_OFI"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(BBDD.SLA_OFI)",
+              "nativeQueryRef": "Total",
+              "displayName": "Total"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "SLA_OFI"
+                }
+              },
+              "queryRef": "BBDD.SLA_OFI",
+              "nativeQueryRef": "SLA",
+              "displayName": "SLA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Pronto_a_Vencer"
+                }
+              },
+              "queryRef": "BBDD.Pronto_a_Vencer",
+              "nativeQueryRef": "Pronto_a_Vencer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Carrera"
+                }
+              },
+              "queryRef": "BBDD.Carrera",
+              "nativeQueryRef": "Carrera1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Programa"
+                }
+              },
+              "queryRef": "BBDD.Programa",
+              "nativeQueryRef": "Programa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Sede"
+                    }
+                  },
+                  "Property": "CAMP"
+                }
+              },
+              "queryRef": "dim_Sede.CAMP",
+              "nativeQueryRef": "Sede",
+              "displayName": "Sede"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Codigo"
+                }
+              },
+              "queryRef": "BBDD.Codigo",
+              "nativeQueryRef": "Código",
+              "displayName": "Código"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "NombresCompletos"
+                }
+              },
+              "queryRef": "BBDD.NombresCompletos",
+              "nativeQueryRef": "Alumno",
+              "displayName": "Alumno"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "FechaDia"
+                }
+              },
+              "queryRef": "BBDD.FechaDia",
+              "nativeQueryRef": "Fecha_Recep",
+              "displayName": "Fecha_Recep"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Fecha_Limite_SLA"
+                }
+              },
+              "queryRef": "BBDD.Fecha_Limite_SLA",
+              "nativeQueryRef": "Fecha_Limite_SLA",
+              "format": "d"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "ModalidadIngreso"
+                }
+              },
+              "queryRef": "BBDD.ModalidadIngreso",
+              "nativeQueryRef": "Modalidad Ingreso",
+              "displayName": "Modalidad Ingreso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "InstitucionConvalidacion"
+                }
+              },
+              "queryRef": "BBDD.InstitucionConvalidacion",
+              "nativeQueryRef": "InstitucionConvalidacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "Est_prev"
+                }
+              },
+              "queryRef": "BBDD.Est_prev",
+              "nativeQueryRef": "Tipo Conva",
+              "displayName": "Tipo Conva"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "ConsejeroAdmision"
+                }
+              },
+              "queryRef": "BBDD.ConsejeroAdmision",
+              "nativeQueryRef": "ConsejeroAdmision"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
+                  "Property": "ConvalidacionPaquete"
+                }
+              },
+              "queryRef": "BBDD.ConvalidacionPaquete",
+              "nativeQueryRef": "Tipo Paquete",
+              "displayName": "Tipo Paquete"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BBDD"
+                                        }
+                                      },
+                                      "Property": "SLA_OFI"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'DENTRO'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#8BC34A'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BBDD"
+                                        }
+                                      },
+                                      "Property": "SLA_OFI"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'FUERA'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#E57373'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "BBDD.SLA_OFI"
+          }
+        },
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "BBDD"
+                                        }
+                                      },
+                                      "Property": "Pronto_a_Vencer"
+                                    }
+                                  },
+                                  "Function": 3
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'PRONTO A VENCER'"
+                                }
+                              }
+                            },
+                            "Annotations": {
+                              "PowerBI.SQExprEvaluationKind": 1,
+                              "PowerBI.SQExprTextOperatorOption": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#ffcb3d'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "BBDD.Pronto_a_Vencer"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.00000036946221D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BBDD.Est_prev"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "208.6355402893417D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BBDD.NombresCompletos"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "201.33334254836024D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BBDD.InstitucionConvalidacion"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "131.28736490542778D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BBDD.Pronto_a_Vencer"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

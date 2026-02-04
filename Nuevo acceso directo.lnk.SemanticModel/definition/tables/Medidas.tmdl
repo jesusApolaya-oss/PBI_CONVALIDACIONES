@@ -1,0 +1,299 @@
+table Medidas
+	lineageTag: eebd7fe0-ce77-4ba6-b7d2-44675b70c90a
+
+	measure Ticket =
+			
+			CALCULATE (
+			    COUNTROWS ( BBDD ),
+			    REMOVEFILTERS ( BBDD[Estado] ),
+			    KEEPFILTERS ( BBDD[Estado] = "Ticket" )
+			)
+		formatString: 0
+		lineageTag: c241992c-438f-4f4c-847e-7e10e9ca23a2
+
+	measure Paquete =
+			
+			CALCULATE (
+			    COUNTROWS ( BBDD ),
+			    REMOVEFILTERS ( BBDD[Estado] ),
+			    KEEPFILTERS ( BBDD[Estado] = "Paquete" )
+			)
+		formatString: 0
+		lineageTag: d7a72f1a-46bd-43a8-9cd6-c794a795f1f1
+
+	measure 'Total Registros' =
+			
+			CALCULATE (
+			    COUNTROWS ( BBDD ),
+			    REMOVEFILTERS ( BBDD[Estado] )
+			)
+		formatString: 0
+		lineageTag: 68d4fd23-11da-4c89-88ba-f60b49ed58b8
+
+	measure Cerrado =
+			
+			CALCULATE (
+			    COUNTROWS ( BBDD ),
+			    REMOVEFILTERS ( BBDD[Estado] ),
+			    KEEPFILTERS ( BBDD[Estado] = "Cerrado" )
+			)
+		formatString: 0
+		lineageTag: 51bf76d5-d41d-4103-bc22-6cc6e61fbd62
+
+	measure 'Numerador Avance' =
+			
+			[Pendiente] + [Cerrado]
+		lineageTag: 671c541d-892b-4b5d-b9d2-87ed9e2892be
+
+	measure Pendiente =
+			
+			CALCULATE (
+			    COUNTROWS ( BBDD ),
+			    REMOVEFILTERS ( BBDD[Estado] ),
+			    KEEPFILTERS ( BBDD[Estado] = "Pendiente" )
+			)
+		formatString: 0
+		lineageTag: 6ad14497-5bb3-4959-8edf-a4a9e422e0cb
+
+	measure 'Denominador Avance' =
+			
+			[Total Registros] - [Paquete] - [Ticket]
+		formatString: 0
+		lineageTag: ab255866-68c2-4259-a023-78b474739b07
+
+	measure '% Avance' =
+			
+			DIVIDE ( [Numerador Avance], [Denominador Avance] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3784acf5-1d00-43ef-82ce-15ea769abecb
+
+	measure '% SLA Dentro' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] = "Dentro"
+			    ),
+			    CALCULATE(
+			        COUNTROWS(BBDD)
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ed1f0ad5-b1b3-4358-be9c-3a9d2c261904
+
+	measure '% SLA Fuera' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] = "Fuera"
+			    ),
+			    CALCULATE(
+			        COUNTROWS(BBDD)
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3774e330-df7e-4bb9-9fd0-ccc93f1bec3f
+
+	measure 'Dentro (conteo)' = ```
+			
+			VAR _conteo =
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] = "Dentro"
+			    )
+			RETURN
+			IF(
+			    ISBLANK(_conteo),
+			    0,
+			    _conteo
+			)
+			
+			```
+		formatString: 0
+		lineageTag: fc67f9c2-4910-4d31-962c-4e1a2aa1ea29
+
+	measure 'Fuera (conteo)' =
+			
+			VAR _conteo =
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] = "Fuera"
+			    )
+			RETURN
+			IF(
+			    ISBLANK(_conteo),
+			    0,
+			    _conteo
+			)
+		formatString: 0
+		lineageTag: 0c42e608-11d1-460e-97bf-9320ac1553ea
+
+	measure 'Total Dentro/Fuera SLA(conteo)' =
+			
+			COUNTROWS(BBDD)
+		formatString: 0
+		lineageTag: b4b73f9f-02fc-4c82-af04-a169d5fe7ea1
+
+	measure 'Total (conteo)' = ```
+			
+			VAR _conteo =
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] IN {"Dentro", "Fuera"}
+			    )
+			RETURN
+			IF(ISBLANK(_conteo), 0, _conteo)
+			
+			```
+		formatString: 0
+		lineageTag: aa0b4f9c-102d-436f-aa2c-2637d4f2a76b
+
+	measure 'Dentro (Paquete)' = ```
+			
+			VAR _conteo =
+			    CALCULATE(
+			        COUNTROWS(BBDD),
+			        BBDD[SLA_OFI] = "Dentro",
+			        NOT(ISBLANK(BBDD[Est_prev]))   -- 🔹 Solo filas donde Est_prev tiene valor
+			    )
+			RETURN
+			IF(ISBLANK(_conteo), 0, _conteo)
+			
+			```
+		formatString: 0
+		lineageTag: b6b436bf-7b64-4176-af2d-b184ee5af01d
+
+	measure 'Responsables Únicos' = ```
+			
+			DISTINCTCOUNT(Responsables[Responsables])
+			
+			```
+		formatString: 0
+		displayFolder: Productividad
+		lineageTag: bd153aab-9335-48ee-a01d-567ca7860615
+
+	measure Ratios =
+			
+			DIVIDE(
+			    [Estado Cerrado],
+			    [Responsables Únicos],
+			    0
+			)
+		displayFolder: Productividad
+		lineageTag: ea84dab5-a757-443c-a127-2dad34879084
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Ratios' =
+			
+			DIVIDE(
+			    [Estado Cerrado],
+			    [Responsables Únicos],
+			    0
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Productividad
+		lineageTag: 7e6b9ec1-56af-40e2-ae80-a7ed2f2468c0
+
+	measure 'Estado Cerrado' = ```
+			
+			COUNTROWS (
+			    FILTER (
+			        BBDD,
+			        NOT ISBLANK ( BBDD[ResponsableConvalidacion] )
+			    )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Productividad
+		lineageTag: 5bfd8650-f92a-45a7-b274-54ebdf263661
+
+	measure 'Convalidaciones Completadas' = ```
+			
+			CALCULATE (
+			    COUNT ( BBDD[ResponsableConvalidacion] ),
+			    NOT ISBLANK ( BBDD[FechaCompletoConvalidacion] )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Productividad 2.0
+		lineageTag: 51b3d827-a4f9-4d58-9297-cbddacd727ea
+
+	measure 'Total Convalidaciones' = ```
+			COUNTROWS ( BBDD )
+			
+			```
+		formatString: 0
+		displayFolder: Productividad 2.0
+		lineageTag: 8e690091-056f-4e04-94b8-b599c52f31c9
+
+	measure 'Productividad (%)' = ```
+			
+			DIVIDE (
+			    [Convalidaciones Completadas],
+			    [Total Convalidaciones],
+			    0
+			)
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Productividad 2.0
+		lineageTag: f2771d6c-c111-4a0b-be89-882ab8f184eb
+
+	measure 'Total por Responsable' = ```
+			
+			COUNT ( BBDD[ResponsableConvalidacion] )
+			
+			```
+		formatString: 0
+		displayFolder: Productividad 2.0
+		lineageTag: 114b0ffd-d496-43fd-8885-a254dd2a47fa
+
+	measure 'Total Responsables con Nombre' = ```
+			
+			COUNT ( BBDD[ResponsableConvalidacion] )
+			
+			```
+		formatString: 0
+		displayFolder: Productividad 2.0
+		lineageTag: dc6fae0b-5ed1-4186-8b17-52dcbc6b9931
+
+	measure Paquetes = ```
+			
+			CALCULATE(
+			    COUNTROWS(BBDD),
+			    BBDD[Tipo paquete] = "Paquete"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 6490d33e-5848-45d4-a741-127090c4321e
+
+	measure Regulares = ```
+			
+			CALCULATE(
+			    COUNTROWS(BBDD),
+			    BBDD[Tipo paquete] = "Regular"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 06740d11-d76c-4d5e-8ee2-c88e021ffe84
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

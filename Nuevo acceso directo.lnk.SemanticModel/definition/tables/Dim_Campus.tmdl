@@ -1,0 +1,45 @@
+table Dim_Campus
+	excludeFromModelRefresh
+	lineageTag: 18cf4449-e181-4f43-b794-ff5242065e1a
+
+	column Responsable
+		dataType: string
+		lineageTag: c1c25ddc-0a84-4579-a57c-0ebc4204a9a6
+		summarizeBy: none
+		sourceColumn: Responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus
+		dataType: string
+		lineageTag: b75234a6-437c-4cd2-8981-361383ed3f91
+		summarizeBy: none
+		sourceColumn: Campus
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID CAMPUS'
+		dataType: int64
+		formatString: 0
+		lineageTag: be6071e3-7f35-4fb7-bdc5-b7fe096cab82
+		summarizeBy: sum
+		sourceColumn: ID CAMPUS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Campus = m
+		mode: import
+		source =
+				let
+				    Origen = Conex,
+				    #"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="DimConvalidaciones.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    Dim_Campus_Table = #"Libro de Excel importado"{[Item="Dim_Campus",Kind="Table"]}[Data],
+				    #"Índice agregado" = Table.AddIndexColumn(Dim_Campus_Table, "ID CAMPUS", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

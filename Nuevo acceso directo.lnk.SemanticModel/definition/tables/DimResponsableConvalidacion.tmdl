@@ -1,0 +1,26 @@
+table DimResponsableConvalidacion
+	lineageTag: 88b52cfe-1cb3-433e-a77c-0c047258c595
+
+	column ResponsableConvalidacion
+		dataType: string
+		lineageTag: b1e71bb8-fe3c-4d41-8471-494095cc39c7
+		summarizeBy: none
+		sourceColumn: ResponsableConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimResponsableConvalidacion = m
+		mode: import
+		source =
+				let
+				    Origen = Table.Combine({Conva_Histo, BBDD}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"ResponsableConvalidacion"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Filas filtradas" = Table.SelectRows(#"Duplicados quitados", each ([ResponsableConvalidacion] <> null))
+				in
+				    #"Filas filtradas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

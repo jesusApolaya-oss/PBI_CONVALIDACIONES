@@ -1,0 +1,33 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-PE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["BBDD","dim_EstadoConvalidacion","dim_Sede","dim_ModalidadIngreso","dim_Carrera","Medidas","Actualización","Conex","Campaña","Responsables","Conva_Histo","Productividad","Dim_Campus","DimResponsableConvalidacion","AD033"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table BBDD
+ref table dim_EstadoConvalidacion
+ref table dim_Sede
+ref table dim_ModalidadIngreso
+ref table Calendario
+ref table dim_Carrera
+ref table Medidas
+ref table Actualización
+ref table 'Calendario FechaCompletoConvalidacion'
+ref table Campaña
+ref table Responsables
+ref table Conva_Histo
+ref table Productividad
+ref table Dim_Campus
+ref table DimResponsableConvalidacion
+ref table AD033
+
+ref cultureInfo es-MX
+

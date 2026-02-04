@@ -1,0 +1,63 @@
+table Productividad
+	lineageTag: 189eb3d7-c383-4279-9dac-0837bb593516
+
+	column Grupo
+		dataType: string
+		lineageTag: 736752b2-470e-4d5f-85d3-eeea65b32c85
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campus
+		dataType: string
+		lineageTag: 3d6e700f-6c8e-4aa3-8755-66dc87e3849c
+		summarizeBy: none
+		sourceColumn: Campus
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Docentes'
+		dataType: double
+		formatString: 0
+		lineageTag: 61a0674b-8b22-4ee8-8171-6b3379ebd22b
+		summarizeBy: sum
+		sourceColumn: N° Docentes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N° Semana'
+		dataType: string
+		lineageTag: 647f7363-40f5-41ed-8f8f-69ca85ac2fb7
+		summarizeBy: none
+		sourceColumn: N° Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID CAMPUS'
+		dataType: int64
+		formatString: 0
+		lineageTag: acc2e195-76a6-4101-ab5e-a30b5c2246ff
+		summarizeBy: sum
+		sourceColumn: ID CAMPUS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Productividad = m
+		mode: import
+		source =
+				let
+				    Origen = Conex,
+				    #"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="DimConvalidaciones.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    Produc__Table = #"Libro de Excel importado"{[Item="Produc_",Kind="Table"]}[Data],
+				    #"Consultas combinadas" = Table.NestedJoin(Produc__Table, {"Campus"}, Dim_Campus, {"Campus"}, "Dim_Campus", JoinKind.LeftOuter),
+				    #"Se expandió Dim_Campus" = Table.ExpandTableColumn(#"Consultas combinadas", "Dim_Campus", {"ID CAMPUS"}, {"ID CAMPUS"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Se expandió Dim_Campus",{{"N° Semana", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

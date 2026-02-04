@@ -1,0 +1,51 @@
+table Actualización
+	isHidden
+	lineageTag: ecc35cb5-e952-4a6d-80e6-02a5b96eb87b
+
+	measure 'Fecha última actualización' =
+			
+			SELECTEDVALUE('Actualización'[Ultima actualización])
+		formatString: Long Date
+		isHidden
+		lineageTag: c53b7bce-efc1-411d-adfe-d496d4b54316
+
+		changedProperty = IsHidden
+
+	measure 'Hora última actualización' =
+			
+			SELECTEDVALUE('Actualización'[Ultima actualización])
+		formatString: Long Time
+		isHidden
+		lineageTag: 43ece7ab-f079-45a0-8bc7-8eb7f564ef14
+
+		changedProperty = IsHidden
+
+	column 'Ultima actualización'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 3c275246-1773-4a59-8828-4440f80d76ff
+		summarizeBy: none
+		sourceColumn: Ultima actualización
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Actualización = m
+		mode: import
+		source =
+				let
+				    Origen = DateTimeZone.SwitchZone(DateTimeZone.UtcNow(), -5),
+				    #"Convertida en tabla" = #table(1, {{Origen}}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Convertida en tabla",{{"Column1", type datetimezone}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Column1", "Ultima actualización"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

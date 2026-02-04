@@ -1,0 +1,183 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "93b12231aafaae9a58b5",
+  "displayName": "Productividad",
+  "displayOption": "ActualSize",
+  "height": 1350,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9c3a09f35e23f2c60a3c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Campania"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BBDD",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "Campania"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026-01 PG'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026-01 WA'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "45ae7c00e7ea8d790703",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Est_prev"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BBDD",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Est_prev"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Egresado'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "04a75753e0b9ce311063",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "1c5ee80784c6b7a32596",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "5f2aca17c6419a22f794",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "2599272a6122f1bb56d8",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "e9c9f52d37146d24a5a2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "8b951890246b1d2611b6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ab4614a0b9366c422b0a",
+      "target": "c8b890ce9622c9a0dc99",
+      "type": "DataFilter"
+    }
+  ]
+}

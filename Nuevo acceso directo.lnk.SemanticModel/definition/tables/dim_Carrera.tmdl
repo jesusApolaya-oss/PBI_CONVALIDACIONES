@@ -1,0 +1,78 @@
+table dim_Carrera
+	lineageTag: 49edddca-3f1c-4a24-be3d-57e63ace3297
+
+	column Carrera
+		dataType: string
+		lineageTag: 92045e9c-c0a1-4a67-9681-85f0e0360437
+		summarizeBy: none
+		sourceColumn: Carrera
+
+		annotation SummarizationSetBy = Automatic
+
+	column FACU
+		dataType: string
+		lineageTag: 1322019a-b7d4-4009-8370-a279d4bbad6c
+		summarizeBy: none
+		sourceColumn: FACU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupo
+		dataType: string
+		lineageTag: a24e5b49-ba7e-4785-8f42-aafad7432828
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Responsable
+		dataType: string
+		lineageTag: 40bfd054-853d-4c07-83a0-944288e5efad
+		summarizeBy: none
+		sourceColumn: Responsable
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Carrera'
+		dataType: int64
+		formatString: 0
+		lineageTag: c9cf90fa-2354-4807-9fca-97b91e3204ed
+		summarizeBy: none
+		sourceColumn: ID Carrera
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Carrera Sin WS'
+		dataType: string
+		lineageTag: 8845255a-a85a-48f5-ae9a-d5ce8fe874d1
+		summarizeBy: none
+		sourceColumn: Carrera Sin WS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Carrera abrv'
+		dataType: string
+		lineageTag: b9ac49ba-e647-4b2c-84b3-42960de1d0a6
+		summarizeBy: none
+		sourceColumn: Carrera abrv
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Carrera = m
+		mode: import
+		source =
+				let
+				    Origen = SharePoint.Files("https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/", [ApiVersion = 15]),
+				    #"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="DimConvalidaciones.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"DimConvalidaciones xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    dim_Carrera_Table = #"Libro de Excel importado"{[Item="dim_Carrera",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(dim_Carrera_Table,{{"Grupo", type text}}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Tipo cambiado", "Índice", 1, 1, Int64.Type),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Índice agregado",{{"Índice", "ID Carrera"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

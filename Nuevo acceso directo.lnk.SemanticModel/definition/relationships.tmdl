@@ -1,0 +1,62 @@
+relationship AutoDetected_69d7ccf1-aff6-4efa-aba7-500246597601
+	fromColumn: BBDD.'ID Estado Convalidacion'
+	toColumn: dim_EstadoConvalidacion.'ID Estado Convalidacion'
+
+relationship AutoDetected_62ee92bc-7532-4999-a67a-4263e691fdc8
+	fromColumn: BBDD.'ID ModalidadIngreso'
+	toColumn: dim_ModalidadIngreso.'ID ModalidadIngreso'
+
+relationship eff5e0ac-a5e4-04f7-831f-47faf08ba2f2
+	fromColumn: BBDD.'ID Sede'
+	toColumn: dim_Sede.'ID Sede'
+
+relationship AutoDetected_b2a104a3-3b4c-4286-a3e7-34776bbd20fd
+	fromColumn: BBDD.'ID Carrera'
+	toColumn: dim_Carrera.'ID Carrera'
+
+relationship AutoDetected_5e987ff5-bf0d-4163-9cc9-939e5804d7ca
+	fromColumn: BBDD.'Campaña.ID Campaña'
+	toColumn: Campaña.'ID Campaña'
+
+relationship AutoDetected_43f3b9d9-a567-4397-a329-d12a402a7ad0
+	fromColumn: Responsables.'dim_Carrera.ID Carrera'
+	toColumn: dim_Carrera.'ID Carrera'
+
+relationship cf11d84b-a5df-d480-837c-cc9b4abbfcc8
+	fromColumn: BBDD.FechaDia
+	toColumn: Calendario.Date
+
+relationship a3427dc2-4f12-be70-7657-c36174a0ed7b
+	fromColumn: BBDD.'Fecha CompletoConvalidacion'
+	toColumn: 'Calendario FechaCompletoConvalidacion'.Date
+
+relationship a6bf85f0-1dff-611f-0e85-3afde1636ff1
+	fromColumn: Conva_Histo.'ID Sede'
+	toColumn: dim_Sede.'ID Sede'
+
+relationship AutoDetected_33897c2c-80aa-4d66-a506-0a4504fecd02
+	fromColumn: Conva_Histo.'ID Carrera'
+	toColumn: dim_Carrera.'ID Carrera'
+
+relationship AutoDetected_6fb11568-3b81-46ba-a2aa-87daa37d8baa
+	fromColumn: BBDD.Campus
+	toColumn: Dim_Campus.Campus
+
+relationship AutoDetected_dba229a7-fd1e-4101-bf43-6deba507b113
+	crossFilteringBehavior: bothDirections
+	fromColumn: Productividad.Campus
+	toColumn: Dim_Campus.Campus
+
+relationship AutoDetected_a32682f5-5585-40e0-89c4-3224d3240532
+	fromColumn: BBDD.ResponsableConvalidacion
+	toColumn: DimResponsableConvalidacion.ResponsableConvalidacion
+
+relationship 22075e0a-6014-ad25-2353-bdb98014bd9d
+	crossFilteringBehavior: bothDirections
+	fromColumn: Responsables.Responsables
+	toColumn: DimResponsableConvalidacion.ResponsableConvalidacion
+
+relationship AutoDetected_45e5221f-b867-4cb8-afb7-e6ee315057d0
+	fromColumn: AD033.'ID Carrera'
+	toColumn: dim_Carrera.'ID Carrera'
+

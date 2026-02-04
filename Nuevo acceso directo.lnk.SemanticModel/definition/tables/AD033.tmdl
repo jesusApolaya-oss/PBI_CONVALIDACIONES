@@ -1,0 +1,284 @@
+table AD033
+	lineageTag: ffcbdc15-8c71-41a3-bc55-e29f6725af20
+
+	column PERIODO
+		dataType: string
+		lineageTag: 0f7381c7-62a3-4843-81cb-5ef67fe92b8b
+		summarizeBy: none
+		sourceColumn: PERIODO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMPUS
+		dataType: string
+		lineageTag: e2cd6ea2-fd9b-447b-949f-5ca6b6b3b6d8
+		summarizeBy: none
+		sourceColumn: CAMPUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID ESTUDIANTE'
+		dataType: string
+		lineageTag: a119ccbf-694e-4867-b04e-5a02fb9386f2
+		summarizeBy: none
+		sourceColumn: ID ESTUDIANTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMBRE_ESTUDIANTE
+		dataType: string
+		lineageTag: 278e11d2-9169-4fcc-8368-376eb34037c7
+		summarizeBy: none
+		sourceColumn: NOMBRE_ESTUDIANTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TIPO ESTUDIANTE'
+		dataType: string
+		lineageTag: ad6ec725-f3eb-404d-a29d-0cf4ac7ec9e2
+		summarizeBy: none
+		sourceColumn: TIPO ESTUDIANTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MODALIDAD INGRESO'
+		dataType: string
+		lineageTag: 8fccd1e1-0b37-4bb3-af3b-8f2e37e354db
+		summarizeBy: none
+		sourceColumn: MODALIDAD INGRESO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SUBMODALIDAD INGRESO'
+		dataType: string
+		lineageTag: 98cd7da1-f2b1-4592-a059-26abc3c6b559
+		summarizeBy: none
+		sourceColumn: SUBMODALIDAD INGRESO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROGRAMA
+		dataType: string
+		lineageTag: 11a1aadd-403e-4c86-b994-dfafdeab04f4
+		summarizeBy: none
+		sourceColumn: PROGRAMA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RESULTADO ECA'
+		dataType: string
+		lineageTag: 4266a1fe-4e27-43de-979e-c66f19d51252
+		summarizeBy: none
+		sourceColumn: RESULTADO ECA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PERIODO COHORTE'
+		dataType: string
+		lineageTag: 6f4e3f61-0a00-4909-b3bf-9bf930bc6d21
+		summarizeBy: none
+		sourceColumn: PERIODO COHORTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COHORTES
+		dataType: string
+		lineageTag: cadb243d-3ff0-4436-9fcf-181e750fc090
+		summarizeBy: none
+		sourceColumn: COHORTES
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PERIODO ATRIBUTO'
+		dataType: string
+		lineageTag: 1083394b-b8a4-4476-8786-68cbde66269b
+		summarizeBy: none
+		sourceColumn: PERIODO ATRIBUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATRIBUTOS
+		dataType: string
+		lineageTag: 47afd3a3-2074-4105-9c27-d41cddacdbe1
+		summarizeBy: none
+		sourceColumn: ATRIBUTOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FECHA APROB DOC CURSOS'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 341bc5d5-d01b-4428-ba18-69e9c1002ba5
+		summarizeBy: none
+		sourceColumn: FECHA APROB DOC CURSOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RETENCION DM'
+		dataType: string
+		lineageTag: 3f825e14-2456-452b-a4c8-c407730a854e
+		summarizeBy: none
+		sourceColumn: RETENCION DM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RETENCION DC'
+		dataType: string
+		lineageTag: 7a533c9e-f536-4a91-a9b6-69145b65e706
+		summarizeBy: none
+		sourceColumn: RETENCION DC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RETENCION M1'
+		dataType: string
+		lineageTag: 3ff86558-ed2c-4a93-bf42-7251952d68a3
+		summarizeBy: none
+		sourceColumn: RETENCION M1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RETENCION C2'
+		dataType: string
+		lineageTag: c87d416d-dd61-445c-9865-7a8ee979c5c5
+		summarizeBy: none
+		sourceColumn: RETENCION C2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GRUPO INSCRIPCION'
+		dataType: string
+		lineageTag: c6a145c9-4217-4c0b-83e5-9ddb150d941e
+		summarizeBy: none
+		sourceColumn: GRUPO INSCRIPCION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CANT CURSOS PROYECTADOS'
+		dataType: double
+		lineageTag: dc3d3bbb-2334-46da-9c27-19bc35e1e1a3
+		summarizeBy: sum
+		sourceColumn: CANT CURSOS PROYECTADOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'CANT CREDITOS PROYECTADOS'
+		dataType: double
+		lineageTag: 06fbfa99-5c35-4e03-a448-9706516445dd
+		summarizeBy: sum
+		sourceColumn: CANT CREDITOS PROYECTADOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FLAG_MATRICULA_COMPLETA
+		dataType: string
+		lineageTag: 9a8accc5-74df-438a-83bd-13a69830213a
+		summarizeBy: none
+		sourceColumn: FLAG_MATRICULA_COMPLETA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CELULAR
+		dataType: string
+		lineageTag: e4c43d55-4af5-4576-86d2-8fe335a84edb
+		summarizeBy: none
+		sourceColumn: CELULAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMAIL
+		dataType: string
+		lineageTag: ae766b5a-7209-4d3e-a966-aed224c4f673
+		summarizeBy: none
+		sourceColumn: EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONSEJERO
+		dataType: string
+		lineageTag: 824f05a7-a517-444f-9826-53f729144e3c
+		summarizeBy: none
+		sourceColumn: CONSEJERO
+
+		annotation SummarizationSetBy = Automatic
+
+	column COORDINADOR
+		dataType: string
+		lineageTag: 90d7bac1-7ba1-4066-8a6f-4613f41332fc
+		summarizeBy: none
+		sourceColumn: COORDINADOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'REPORTE PLANO'
+		dataType: string
+		lineageTag: 7ccf6c9c-a85d-4884-8322-4aa411c79bec
+		summarizeBy: none
+		sourceColumn: REPORTE PLANO
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBSERVACION
+		dataType: string
+		lineageTag: 6eca5053-65ce-431c-b52a-ad262b311e76
+		summarizeBy: none
+		sourceColumn: OBSERVACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupo
+		dataType: string
+		lineageTag: 043de186-2e3d-4457-90a3-97d4e051195a
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Paquete
+		dataType: string
+		lineageTag: 1c6a6040-a76e-46ab-8038-ae40482f8581
+		summarizeBy: none
+		sourceColumn: Paquete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Carrera'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dc578f3-b488-4e93-b6a0-f09684cbd16f
+		summarizeBy: none
+		sourceColumn: ID Carrera
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvalidacionPaquete
+		dataType: string
+		lineageTag: b3b70028-c6c9-459a-bec5-0e736a7b7503
+		summarizeBy: none
+		sourceColumn: ConvalidacionPaquete
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AD033 = m
+		mode: import
+		source =
+				let
+				    Origen = Conex,
+				    #"AD033 03 02 xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="AD033 03.02.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"AD033 03 02 xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    Tabla1_Table = #"Libro de Excel importado"{[Item="Tabla1",Kind="Table"]}[Data],
+				    #"Consultas combinadas" = Table.NestedJoin(Tabla1_Table, {"PROGRAMA"}, dim_Carrera, {"Carrera"}, "dim_Carrera", JoinKind.LeftOuter),
+				    #"Se expandió dim_Carrera" = Table.ExpandTableColumn(#"Consultas combinadas", "dim_Carrera", {"ID Carrera"}, {"ID Carrera"}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió dim_Carrera", {"ID ESTUDIANTE"}, BBDD, {"Codigo"}, "BBDD", JoinKind.LeftOuter),
+				    #"Se expandió BBDD" = Table.ExpandTableColumn(#"Consultas combinadas1", "BBDD", {"ConvalidacionPaquete"}, {"ConvalidacionPaquete"})
+				in
+				    #"Se expandió BBDD"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

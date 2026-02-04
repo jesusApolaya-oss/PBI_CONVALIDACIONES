@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "67210dcf848ca12d6815",
+  "position": {
+    "x": 816,
+    "y": 95.999999999999986,
+    "z": 7000,
+    "height": 64,
+    "width": 448,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Carrera"
+                    }
+                  },
+                  "Property": "Carrera Sin WS"
+                }
+              },
+              "queryRef": "dim_Carrera.Carrera Sin WS",
+              "nativeQueryRef": "Carrera",
+              "active": true,
+              "displayName": "Carrera"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

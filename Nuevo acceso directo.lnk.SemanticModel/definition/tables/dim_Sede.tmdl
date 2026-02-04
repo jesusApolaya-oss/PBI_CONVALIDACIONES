@@ -1,0 +1,59 @@
+table dim_Sede
+	lineageTag: 8bd8adce-acfe-4104-a327-34c1d63e88fd
+
+	column Sede
+		dataType: string
+		lineageTag: 9b76dd65-7823-4b23-ad31-02fcf57f65d6
+		summarizeBy: none
+		sourceColumn: Sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAMP
+		dataType: string
+		lineageTag: a60e1bc7-cf45-409b-b054-e79ea268c00a
+		summarizeBy: none
+		sourceColumn: CAMP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Sede'
+		dataType: int64
+		formatString: 0
+		lineageTag: e07836b6-f492-4b3a-a8f5-6e2cfcb0b7fc
+		summarizeBy: none
+		sourceColumn: ID Sede
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Sede = m
+		mode: import
+		source =
+				let
+				    TablaSedeCamp = #table(
+				        {"Sede", "CAMP"},
+				        {
+				            {"Lima Sur", "Chorrillos"},
+				            {"Lima Comas", "Comas"},
+				            {"Lima Centro", "Breña"},
+				            {"Lima Este", "San Juan"},
+				            {"Lima Norte", "Los Olivos"},
+				            {"Trujillo", "Trujillo"},
+				            {"Cajamarca", "Cajamarca"},
+				            {"Trujillo San Isidro", "Trujillo"},
+				            {"Virtual", "Virtual"},
+				            {"Lima Ate", "Ate"},
+				            {"Chorrillos", "Chorrillos"},
+				            {"Comas Satelite", "Comas"}
+				
+				
+				        }
+				    ),
+				    #"Índice agregado" = Table.AddIndexColumn(TablaSedeCamp, "ID Sede", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

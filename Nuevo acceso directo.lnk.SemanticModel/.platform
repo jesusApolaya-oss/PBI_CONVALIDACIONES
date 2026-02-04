@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Nuevo acceso directo.lnk"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9767eed3-cbc7-4063-92d2-326543c2d823"
+  }
+}

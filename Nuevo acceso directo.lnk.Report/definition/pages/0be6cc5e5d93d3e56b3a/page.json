@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "0be6cc5e5d93d3e56b3a",
+  "displayName": "Egresados UPN",
+  "displayOption": "ActualSize",
+  "height": 720,
+  "width": 960,
+  "visibility": "HiddenInViewMode"
+}

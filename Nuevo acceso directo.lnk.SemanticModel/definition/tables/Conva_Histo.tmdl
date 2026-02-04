@@ -1,0 +1,456 @@
+table Conva_Histo
+	lineageTag: e2007660-4fa0-4d9f-98bd-a37c14dde4b9
+
+	column Column1
+		dataType: double
+		lineageTag: efbe7eb1-c054-4ecb-bfbe-61487e2e0735
+		summarizeBy: sum
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sede
+		dataType: string
+		lineageTag: 6e651e68-138d-4a99-ab60-2e8307d1e1a7
+		summarizeBy: none
+		sourceColumn: Sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsejeroAdmision
+		dataType: string
+		lineageTag: c042d872-7d53-4f6b-85fc-c6224f902acf
+		summarizeBy: none
+		sourceColumn: ConsejeroAdmision
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstudianteEntregoDocumentosParaConvalidacion
+		dataType: string
+		lineageTag: 44a7b731-137d-4c03-8b9e-6a39e45747dd
+		summarizeBy: none
+		sourceColumn: EstudianteEntregoDocumentosParaConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Recep
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 10c82500-1bb1-4248-be82-25e425804d86
+		summarizeBy: none
+		sourceColumn: Fecha_Recep
+
+		annotation SummarizationSetBy = Automatic
+
+	column Carrera
+		dataType: string
+		lineageTag: a4f21c21-99b5-4022-810b-7f5592615701
+		summarizeBy: none
+		sourceColumn: Carrera
+
+		annotation SummarizationSetBy = Automatic
+
+	column Programa
+		dataType: string
+		lineageTag: 296090bd-3166-41a9-9b8e-9bc63c505571
+		summarizeBy: none
+		sourceColumn: Programa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Campania
+		dataType: string
+		lineageTag: 822fd11d-aafe-499c-adad-df6b532e3abc
+		summarizeBy: none
+		sourceColumn: Campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: string
+		lineageTag: 2016646c-4eaf-4adc-9d98-416ec44e255b
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApellidoPaterno
+		dataType: string
+		lineageTag: 0632ce85-d023-4814-b96b-0a9fcbfbf3be
+		summarizeBy: none
+		sourceColumn: ApellidoPaterno
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApellidoMaterno
+		dataType: string
+		lineageTag: 02b39404-23a8-4515-b7be-472fcbd794ad
+		summarizeBy: none
+		sourceColumn: ApellidoMaterno
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombres
+		dataType: string
+		lineageTag: 68082a07-f925-4320-878a-de8045331cad
+		summarizeBy: none
+		sourceColumn: Nombres
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModalidadIngreso
+		dataType: string
+		lineageTag: 704cd3ce-cf09-4863-b750-d2f4390a6065
+		summarizeBy: none
+		sourceColumn: ModalidadIngreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubModalidadIngreso
+		dataType: string
+		lineageTag: 891007a3-374e-4072-b498-6d3ae9a90a56
+		summarizeBy: none
+		sourceColumn: SubModalidadIngreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstadoConvalidacion
+		dataType: string
+		lineageTag: d11ecef3-48c5-466d-a742-cff8cf2eb73e
+		summarizeBy: none
+		sourceColumn: EstadoConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCompletoConvalidacion
+		dataType: string
+		lineageTag: 3017baf7-3bd2-4f71-952f-e162725ce1a3
+		summarizeBy: none
+		sourceColumn: FechaCompletoConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsableConvalidacion
+		dataType: string
+		lineageTag: 59d8a50c-9d51-41b4-a26f-b4e15a5e696f
+		summarizeBy: none
+		sourceColumn: ResponsableConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column UltimoEstadoRevisionDocumento
+		dataType: string
+		lineageTag: 6fb0b7ee-db28-4646-b129-ad13e27d585a
+		summarizeBy: none
+		sourceColumn: UltimoEstadoRevisionDocumento
+
+		annotation SummarizationSetBy = Automatic
+
+	column InstitucionConvalidacion
+		dataType: string
+		lineageTag: a59512bb-e508-45aa-9d8a-bfd6ce9f2e8b
+		summarizeBy: none
+		sourceColumn: InstitucionConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column TieneConvalidacion
+		dataType: string
+		lineageTag: 04fd054c-a71e-4c96-bc7e-3dee839694f0
+		summarizeBy: none
+		sourceColumn: TieneConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvalidacionPaquete
+		dataType: string
+		lineageTag: 93ca54fc-0758-4d7f-a9c3-f59e79f0eaaf
+		summarizeBy: none
+		sourceColumn: ConvalidacionPaquete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Sede'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8141e35c-6905-4118-985b-84d6f3f24b62
+		summarizeBy: none
+		sourceColumn: ID Sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombresCompletos
+		dataType: string
+		lineageTag: 724faf1d-9879-454b-b1e6-15619810b5a4
+		summarizeBy: none
+		sourceColumn: NombresCompletos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sem =
+			
+			VAR _Semana = WEEKNUM(Conva_Histo[Fecha_Recep], 2)  // 2 = la semana empieza en lunes
+			RETURN
+			"S" & FORMAT(_Semana, "00")
+		lineageTag: 15faeb97-d21e-4c63-b027-cfb3984fccdf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sem_camp = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    /* =======================
+			       CAMPAÑA 2025-01
+			    ======================= */
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S36", 1,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S37", 2,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S38", 3,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S39", 4,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S40", 5,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S41", 6,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S42", 7,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S43", 8,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S44", 9,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S45", 10,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S46", 11,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S47", 12,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S48", 13,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S49", 14,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S50", 15,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S51", 16,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S52", 17,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S53", 18,
+			
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S01", 19,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S02", 20,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S03", 21,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S04", 22,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S05", 23,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S06", 24,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S07", 25,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S08", 26,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S09", 27,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S10", 28,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S11", 29,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S12", 30,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S13", 31,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S14", 32,
+			    Conva_Histo[Campaña formato] = "2025-01" && Conva_Histo[Sem] = "S15", 33,
+			
+			    /* =======================
+			       CAMPAÑA 2026-01
+			    ======================= */
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S36", 1,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S37", 2,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S38", 3,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S39", 4,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S40", 5,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S41", 6,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S42", 7,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S43", 8,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S44", 9,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S45", 10,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S46", 11,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S47", 12,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S48", 13,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S49", 14,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S50", 15,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S51", 16,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S52", 17,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S53", 18,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S01", 19,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S02", 20,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S03", 21,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S04", 22,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S05", 23,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S06", 24,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S07", 25,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S08", 26,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S09", 27,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S10", 28,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S11", 29,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S12", 30,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S13", 31,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S14", 32,
+			    Conva_Histo[Campaña formato] = "2026-01" && Conva_Histo[Sem] = "S15", 33,
+			
+			
+			
+			
+			    BLANK()
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 027cc332-ba30-41c7-909c-14b9da5bcbd0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campaña formato' =
+			
+			SWITCH(
+			    TRUE(),
+			    Conva_Histo[Campania] = "2022-01 PG", "2022-01",
+			    Conva_Histo[Campania] = "2022-01 WA", "2022-01",
+			    Conva_Histo[Campania] = "2022-02 PG", "2022-02",
+			    Conva_Histo[Campania] = "2022-02 WA", "2022-02",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 CAJAMARCA", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 COMAS", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 LIMA CENTRO", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 LIMA ESTE", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 LIMA NORTE", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 LIMA SUR", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 TRUJILLO", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WAC", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WACO", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WALC", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WALE", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WALN", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WALS", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WAT", "2022-01",
+			    Conva_Histo[Campania] = "CAMPAÑA 2022-1 WALE", "2022-01",
+			    Conva_Histo[Campania] = "2024-02 PG", "2024-02",
+			    Conva_Histo[Campania] = "2024-02 WA", "2024-02",
+			    Conva_Histo[Campania] = "2024-02 WV", "2024-02",
+			    Conva_Histo[Campania] = "2025-01 PG", "2025-01",
+			    Conva_Histo[Campania] = "2025-01 WA", "2025-01",
+			    Conva_Histo[Campania] = "2025-01 WS", "2025-01",
+			    Conva_Histo[Campania] = "2025-01 WV", "2025-01",
+			    Conva_Histo[Campania] = "2025-02 PG", "2025-02",
+			    Conva_Histo[Campania] = "2025-02 WA", "2025-02",
+			    Conva_Histo[Campania] = "2026-01 PG", "2026-01",
+			    Conva_Histo[Campania] = "2026-01 WA", "2026-01",
+			    BLANK()
+			)
+		lineageTag: ae9d63d0-72ec-4ca1-a86a-dcb3362dabea
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Carrera'
+		dataType: int64
+		formatString: 0
+		lineageTag: 263058cf-162e-4de4-87ea-3faeae5715a1
+		summarizeBy: none
+		sourceColumn: ID Carrera
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo paquete' =
+			
+			SWITCH(
+			    TRUE(),
+			    Conva_Histo[ConvalidacionPaquete] = "P 1 - 2 - 3", "Paquete",
+			    Conva_Histo[ConvalidacionPaquete] = "P 1 - 2 - 3 - 4", "Paquete",
+			    Conva_Histo[ConvalidacionPaquete] = "P 1 - 2", "Paquete",
+			    Conva_Histo[ConvalidacionPaquete] = "P 1", "Paquete",
+			    Conva_Histo[ConvalidacionPaquete] = "No aplica", "Regular",
+			    Conva_Histo[ConvalidacionPaquete] = " ", "Regular",
+			    ISBLANK(Conva_Histo[ConvalidacionPaquete]), "Regular",
+			    "Regular"
+			)
+		lineageTag: 4e0a1a9b-2ee7-4aaa-997b-243199d640e1
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_Inicio_Semana =
+			
+			VAR _Fecha = Conva_Histo[Fecha_Recep]
+			VAR _DiaSemana = WEEKDAY(_Fecha, 2)   -- 2 = lunes=1, domingo=7
+			RETURN
+			    _Fecha - (_DiaSemana - 1)
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 449713cd-4278-454a-a52f-c69e9bebbf7f
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Fecha_Cierre_Semana =
+			
+			VAR _Fecha = Conva_Histo[Fecha_Recep]
+			VAR _DiaSemana = WEEKDAY(_Fecha, 2)     -- lunes=1, domingo=7
+			RETURN
+			    _Fecha + (7 - _DiaSemana)
+		formatString: Short Date
+		lineageTag: 45ff87e6-85bd-4cc6-8dd5-6a8fc1195216
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Est_prev =
+			
+			VAR modalidad = Conva_Histo[ModalidadIngreso]
+			VAR entrega = Conva_Histo[EstudianteEntregoDocumentosParaConvalidacion]
+			VAR convPaq = Conva_Histo[ConvalidacionPaquete]
+			VAR estadoConv = Conva_Histo[EstadoConvalidacion]
+			
+			-- Condiciones base
+			VAR esEgresadoUPN = NOT( ISBLANK(modalidad) ) && LEFT(modalidad, 12) = "EGRESADO UPN"
+			VAR entregaEsSI = entrega = "SI"
+			VAR convPaqValido = NOT(ISBLANK(convPaq)) && convPaq <> "No aplica"
+			VAR estadoPendiente = estadoConv = "Pendiente"
+			
+			VAR resultado =
+			    IF(
+			        ISBLANK(modalidad),
+			        BLANK(),
+			        IF(
+			            esEgresadoUPN && entregaEsSI,
+			            "Egresado",
+			            IF(
+			                entregaEsSI && convPaqValido && estadoPendiente,
+			                "Paquete",
+			                BLANK()
+			            )
+			        )
+			    )
+			
+			RETURN
+			IF( ISBLANK(resultado), "Regular", resultado )
+		lineageTag: 05fd4e86-83fb-48eb-8dbc-7122ca55cd2c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Conva_Histo = m
+		mode: import
+		source =
+				let
+				    Origen = SharePoint.Files("https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/", [ApiVersion = 15]),
+				    #"Convalidaciones_historico xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="Convalidaciones_historico.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"Convalidaciones_historico xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    Sheet1_Sheet = #"Libro de Excel importado"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Encabezados promovidos",{{"FechaNotificacionAcademia", "Fecha_Recep"}}),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(#"Columnas con nombre cambiado", {{"Fecha_Recep", type datetimezone}}, "es-PE"),
+				    #"Consulta anexada" = Table.Combine({#"Tipo cambiado con configuración regional", BBDD}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Consulta anexada",{"Column1", "Sede", "ConsejeroAdmision", "EstudianteEntregoDocumentosParaConvalidacion", "Fecha_Recep", "Carrera", "Programa", "Campania", "Codigo", "ApellidoPaterno", "ApellidoMaterno", "Nombres", "ModalidadIngreso", "SubModalidadIngreso", "EstadoConvalidacion", "FechaCompletoConvalidacion", "ResponsableConvalidacion", "UltimoEstadoRevisionDocumento", "InstitucionConvalidacion", "TieneConvalidacion", "ConvalidacionPaquete", "NombresCompletos"}),
+				    #"Poner En Mayúsculas Cada Palabra" = Table.TransformColumns(#"Otras columnas quitadas",{{"Sede", Text.Proper, type text}}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Poner En Mayúsculas Cada Palabra", {"Sede"}, dim_Sede, {"Sede"}, "dim_Sede", JoinKind.LeftOuter),
+				    #"Se expandió dim_Sede" = Table.ExpandTableColumn(#"Consultas combinadas", "dim_Sede", {"ID Sede"}, {"ID Sede"}),
+				    #"Filas ordenadas" = Table.Sort(#"Se expandió dim_Sede",{{"Fecha_Recep", Order.Descending}}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Filas ordenadas", {"Carrera"}, dim_Carrera, {"Carrera"}, "dim_Carrera", JoinKind.LeftOuter),
+				    #"Se expandió dim_Carrera" = Table.ExpandTableColumn(#"Consultas combinadas1", "dim_Carrera", {"ID Carrera"}, {"ID Carrera"})
+				in
+				    #"Se expandió dim_Carrera"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,75 @@
+table Campaña
+	lineageTag: 7139e3aa-fbea-4d5f-b7a0-8a97ce55ea4d
+
+	column Campaña
+		dataType: string
+		lineageTag: d3647516-7d45-4eb3-9148-44f304957252
+		summarizeBy: none
+		sourceColumn: Campaña
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campaña formato'
+		dataType: string
+		lineageTag: ae5ca0fb-5019-4193-9b57-5d58e16be14f
+		summarizeBy: none
+		sourceColumn: Campaña formato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Campaña'
+		dataType: int64
+		formatString: 0
+		lineageTag: b797a3ed-2898-40d6-94bc-629916e63642
+		summarizeBy: none
+		sourceColumn: ID Campaña
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Campaña = m
+		mode: import
+		source =
+				let
+				    Fuente = #table(
+				        {"Campaña", "Campaña formato"},
+				        {
+				            {"CAMPAÑA 2022-1 WALC", "2022-01"},
+				            {"CAMPAÑA 2022-1 WALS", "2022-01"},
+				            {"CAMPAÑA 2022-1 WACO", "2022-01"},
+				            {"CAMPAÑA 2022-1 WALE", "2022-01"},
+				            {"CAMPAÑA 2022-1 WAC", "2022-01"},
+				            {"CAMPAÑA 2022-1 WALN", "2022-01"},
+				            {"CAMPAÑA 2022-1 WAT", "2022-01"},
+				            {"2026-01 PG", "2026-01"},
+				            {"2025-01 PG", "2025-01"},
+				            {"2024-02 PG", "2024-01"},
+				            {"2022-01 PG", "2022-01"},
+				            {"2022-02 PG", "2022-01"},
+				            {"2025-02 PG", "2025-01"},
+				            {"CAMPAÑA 2022-1 LIMA CENTRO", "2022-01"},
+				            {"CAMPAÑA 2022-1 COMAS", "2022-01"},
+				            {"CAMPAÑA 2022-1 LIMA SUR", "2022-01"},
+				            {"CAMPAÑA 2022-1 CAJAMARCA", "2022-01"},
+				            {"CAMPAÑA 2022-1 LIMA ESTE", "2022-01"},
+				            {"CAMPAÑA 2022-1 LIMA NORTE", "2022-01"},
+				            {"CAMPAÑA 2022-1 TRUJILLO", "2022-01"},
+				            {"2022-02 WA", "2022-02"},
+				            {"2025-01 WS", "2025-01"},
+				            {"2025-01 WA", "2025-01"},
+				            {"2022-01 WA", "2022-01"},
+				            {"2026-01 WA", "2026-01"},
+				            {"2024-02 WA", "2024-01"},
+				            {"2025-02 WA", "2025-01"},
+				            {"2024-02 WS", "2024-01"},
+				            {"2025-01 WV", "2025-01"},
+				            {"2024-02 WV", "2024-01"}
+				        }
+				    ),
+				    #"Índice agregado" = Table.AddIndexColumn(Fuente, "ID Campaña", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

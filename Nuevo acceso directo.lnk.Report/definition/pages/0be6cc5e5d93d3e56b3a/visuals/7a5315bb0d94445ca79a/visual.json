@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "7a5315bb0d94445ca79a",
+  "position": {
+    "x": 537.7777777777776,
+    "y": 89.9999999999999,
+    "z": 2000,
+    "height": 62.222222222222221,
+    "width": 183.33333333333334,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ModalidadIngreso"
+                    }
+                  },
+                  "Property": "Grupo"
+                }
+              },
+              "queryRef": "dim_ModalidadIngreso.Grupo",
+              "nativeQueryRef": "Modalidad",
+              "active": true,
+              "displayName": "Modalidad"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
