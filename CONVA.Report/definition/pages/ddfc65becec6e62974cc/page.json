@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ddfc65becec6e62974cc",
+  "displayName": "AD033",
+  "displayOption": "ActualSize",
+  "height": 1440,
+  "width": 1280,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "231L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "162c0475625f3c59828c",
+      "target": "cb4671c12d3b54768edd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "162c0475625f3c59828c",
+      "target": "545e91648637bc9dd1f8",
+      "type": "DataFilter"
+    },
+    {
+      "source": "162c0475625f3c59828c",
+      "target": "1e8d328dc92b232f14e5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f66cd9c74ad983cffb26",
+      "target": "cb4671c12d3b54768edd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fe19a5cf77c2c63fa5b8",
+      "target": "cb4671c12d3b54768edd",
+      "type": "NoFilter"
+    }
+  ]
+}

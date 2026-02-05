@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CONVA"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f3310d4-bb7f-49f5-8a71-a26341a3e9e2"
+  }
+}
