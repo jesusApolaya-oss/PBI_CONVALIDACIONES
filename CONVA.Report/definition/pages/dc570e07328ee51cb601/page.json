@@ -1,9 +1,21 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "dc570e07328ee51cb601",
-  "displayName": "Página 1",
+  "displayName": "ProcedenciaEstudiante",
   "displayOption": "ActualSize",
-  "height": 1440,
+  "height": 1200,
   "width": 1280,
-  "visibility": "HiddenInViewMode"
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "a6995bdf04dbf1a43972",
+      "target": "e2657b9886f9bb1195ef",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a6995bdf04dbf1a43972",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    }
+  ]
 }

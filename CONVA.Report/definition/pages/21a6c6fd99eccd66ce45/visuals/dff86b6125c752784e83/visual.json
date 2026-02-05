@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "99bf7e0740a53006e9da",
+  "name": "dff86b6125c752784e83",
   "position": {
-    "x": 912,
-    "y": 0,
-    "z": 22000,
+    "x": 1184,
+    "y": 80,
+    "z": 25000,
     "height": 80,
     "width": 95.999999999999986,
-    "tabOrder": 23000
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "actionButton",
@@ -56,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Conva con error'"
+                  "Value": "'Totales procedencia de estudiante'"
                 }
               }
             },
@@ -89,7 +89,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "9D"
                 }
               }
             }
@@ -166,7 +166,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'ddfc65becec6e62974cc'"
+                  "Value": "'dc570e07328ee51cb601'"
                 }
               }
             }

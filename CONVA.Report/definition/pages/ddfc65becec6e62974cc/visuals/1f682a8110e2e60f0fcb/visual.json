@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "162c0475625f3c59828c",
+  "name": "1f682a8110e2e60f0fcb",
   "position": {
-    "x": 16,
+    "x": 848.00000000000011,
     "y": 435,
-    "z": 2000,
+    "z": 9000,
     "height": 64,
-    "width": 208,
-    "tabOrder": 2000
+    "width": 416,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Carrera"
+                      "Entity": "AD033"
                     }
                   },
-                  "Property": "Responsable"
+                  "Property": "OBSERVACION"
                 }
               },
-              "queryRef": "dim_Carrera.Responsable",
-              "nativeQueryRef": "Grupo",
-              "active": true,
-              "displayName": "Grupo"
+              "queryRef": "AD033.OBSERVACION",
+              "nativeQueryRef": "OBSERVACION",
+              "active": true
             }
           ]
         }
@@ -92,5 +91,56 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "55871d741795f4c8e666",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "AD033"
+              }
+            },
+            "Property": "OBSERVACION"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "AD033",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Contains": {
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "a"
+                        }
+                      },
+                      "Property": "OBSERVACION"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'proyectados'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

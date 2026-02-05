@@ -4,10 +4,10 @@
   "position": {
     "x": 16,
     "y": 912,
-    "z": 19000,
+    "z": 17000,
     "height": 560,
     "width": 256,
-    "tabOrder": 19000
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -401,39 +401,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "1460793d3d6721bf0433",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "BBDD"
-              }
-            },
-            "Property": "FechaDia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ad1a6d8b0e10eeb0a2be",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "BBDD"
-                  }
-                },
-                "Property": "Fecha_Recep"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

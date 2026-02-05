@@ -1,49 +1,20 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b36419ae7e0570df12c0",
+  "name": "4f721d33a928841d4ced",
   "position": {
-    "x": 16,
-    "y": 800,
-    "z": 1000,
-    "height": 432,
-    "width": 1248,
-    "tabOrder": 1000
+    "x": 432,
+    "y": 576,
+    "z": 4005,
+    "height": 336,
+    "width": 720,
+    "tabOrder": 4005
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "BBDD"
-                    }
-                  },
-                  "Property": "Carrera"
-                }
-              },
-              "queryRef": "BBDD.Carrera",
-              "nativeQueryRef": "Carrera"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "BBDD"
-                    }
-                  },
-                  "Property": "InstitucionConvalidacion"
-                }
-              },
-              "queryRef": "BBDD.InstitucionConvalidacion",
-              "nativeQueryRef": "Institución Convalidación",
-              "displayName": "Institución Convalidación"
-            },
             {
               "field": {
                 "Column": {
@@ -57,38 +28,14 @@
               },
               "queryRef": "dim_Sede.CAMP",
               "nativeQueryRef": "Campus",
+              "active": true,
               "displayName": "Campus"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Regulares"
-                }
-              },
-              "queryRef": "Medidas.Regulares",
-              "nativeQueryRef": "Regulare",
-              "displayName": "Regulare"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Paquetes"
-                }
-              },
-              "queryRef": "Medidas.Paquetes",
-              "nativeQueryRef": "Paquete",
-              "displayName": "Paquete"
-            },
+            }
+          ],
+          "showAll": true
+        },
+        "Series": {
+          "projections": [
             {
               "field": {
                 "Column": {
@@ -102,7 +49,12 @@
               },
               "queryRef": "BBDD.Estado",
               "nativeQueryRef": "Estado"
-            },
+            }
+          ],
+          "showAll": true
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -140,176 +92,64 @@
       }
     },
     "objects": {
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "82.00000437528098D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "BBDD"
-                          }
-                        },
-                        "Property": "Situac"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'DENTRO'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "75.55553822459702D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "BBDD"
-                          }
-                        },
-                        "Property": "Situac"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'FUERA'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "74.22223262798414D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "total": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BBDD"
-                        }
-                      },
-                      "Property": "Situac"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "49.777780289513416D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "total": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "BBDD"
-                        }
-                      },
-                      "Property": "SLA_OFI"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "62.3333495630158D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.Total (conteo)"
-          }
-        }
-      ],
       "general": [
         {
           "properties": {}
         }
       ],
-      "grid": [
+      "labels": [
         {
           "properties": {
-            "gridHorizontal": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {
-            "fontColor": {
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideBase'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
@@ -320,110 +160,20 @@
                   }
                 }
               }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
             }
           }
         }
       ],
-      "values": [
+      "dataPoint": [
         {
           "properties": {
-            "wordWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "backColor": {
+            "fill": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "BBDD"
-                                        }
-                                      },
-                                      "Property": "Estado"
-                                    }
-                                  },
-                                  "Function": 3
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'Cerrado'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#8BC34A'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "BBDD"
-                                        }
-                                      },
-                                      "Property": "Estado"
-                                    }
-                                  },
-                                  "Function": 3
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'Pendiente'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#E57373'"
-                            }
-                          }
-                        }
-                      ]
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
                     }
                   }
                 }
@@ -433,35 +183,116 @@
           "selector": {
             "data": [
               {
-                "dataViewWildcard": {
-                  "matchingOption": 1
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "BBDD"
+                          }
+                        },
+                        "Property": "Estado"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Pendiente'"
+                      }
+                    }
+                  }
                 }
               }
-            ],
-            "metadata": "BBDD.Estado"
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "BBDD"
+                          }
+                        },
+                        "Property": "Estado"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cerrado'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],
-      "columnFormatting": [
+      "categoryAxis": [
         {
           "properties": {
-            "alignment": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Center'"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
-            "styleTotal": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "Medidas.Total (conteo)"
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -473,14 +304,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ACUMULADO DE CONVALIDACIONES CERRADAS (PAQUETE Y REGULARES)'"
+                  "Value": "'ACUMULADO DE CONVALIDACIONES SEGÚN SEDE DE ESTUDIANTE (CERRADA Y PENDIENTE)'"
                 }
               }
             },
@@ -502,8 +333,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#136E2B'"
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -552,6 +384,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'Default'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
