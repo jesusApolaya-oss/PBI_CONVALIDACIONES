@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b374bfd5b6e2bb9883ed",
+  "name": "b5a8f68a3e2e24e35d14",
   "position": {
-    "x": 560,
-    "y": 1590,
-    "z": 26000,
+    "x": 0,
+    "y": 1377.5,
+    "z": 9001,
     "height": 40,
-    "width": 288.75,
-    "tabOrder": 26000
+    "width": 1280,
+    "tabOrder": 9001
   },
   "visual": {
     "visualType": "actionButton",
@@ -78,7 +78,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 4,
-                      "Percent": 0
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -87,7 +87,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "94D"
+                  "Value": "53D"
                 }
               }
             }
@@ -127,7 +127,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'VER MÁS DETALLE'"
+                  "Value": "'DESCARGAR EL DATASET AD033'"
                 }
               }
             },
@@ -166,7 +166,7 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'PageNavigation'"
+                  "Value": "'WebUrl'"
                 }
               }
             },
@@ -181,6 +181,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "webUrl": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://educorpperu.sharepoint.com/:x:/s/OPERACIONESACADMICAS_izhusr/IQAl9E7dZNucT4X4qsv-qwvNAeohxn7yT7Wnidu4so91o4w?e=m8Wao5&download=1'"
                 }
               }
             }

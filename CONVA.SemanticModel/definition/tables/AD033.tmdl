@@ -268,15 +268,16 @@ table AD033
 		source =
 				let
 				    Origen = Conex,
-				    #"AD033 03 02 xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="AD033 03.02.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"AD033 03 02 xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="AD033.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
 				    #"Libro de Excel importado" = Excel.Workbook(#"AD033 03 02 xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
 				    Tabla1_Table = #"Libro de Excel importado"{[Item="Tabla1",Kind="Table"]}[Data],
 				    #"Consultas combinadas" = Table.NestedJoin(Tabla1_Table, {"PROGRAMA"}, dim_Carrera, {"Carrera"}, "dim_Carrera", JoinKind.LeftOuter),
 				    #"Se expandió dim_Carrera" = Table.ExpandTableColumn(#"Consultas combinadas", "dim_Carrera", {"ID Carrera"}, {"ID Carrera"}),
 				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió dim_Carrera", {"ID ESTUDIANTE"}, BBDD, {"Codigo"}, "BBDD", JoinKind.LeftOuter),
-				    #"Se expandió BBDD" = Table.ExpandTableColumn(#"Consultas combinadas1", "BBDD", {"ConvalidacionPaquete"}, {"ConvalidacionPaquete"})
+				    #"Se expandió BBDD" = Table.ExpandTableColumn(#"Consultas combinadas1", "BBDD", {"ConvalidacionPaquete"}, {"ConvalidacionPaquete"}),
+				    #"Errores reemplazados" = Table.ReplaceErrorValues(#"Se expandió BBDD", {{"Paquete", ""}})
 				in
-				    #"Se expandió BBDD"
+				    #"Errores reemplazados"
 
 	annotation PBI_NavigationStepName = Navegación
 
