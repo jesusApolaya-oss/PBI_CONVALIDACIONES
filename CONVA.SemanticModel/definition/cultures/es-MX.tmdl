@@ -4857,6 +4857,16 @@ cultureInfo es-MX
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Tipo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },

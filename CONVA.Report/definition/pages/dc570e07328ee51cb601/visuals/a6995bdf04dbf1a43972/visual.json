@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "a6995bdf04dbf1a43972",
   "position": {
-    "x": 113.47615269252242,
-    "y": 834.23812357584711,
+    "x": 96.3332955496653,
+    "y": 495.95238313220852,
     "z": 0,
     "height": 64,
     "width": 144,
@@ -42,6 +42,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

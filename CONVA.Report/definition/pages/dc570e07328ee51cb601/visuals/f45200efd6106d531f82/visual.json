@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "2e5b8089dc829144ccdd",
+  "name": "f45200efd6106d531f82",
   "position": {
-    "x": 797.428588867188,
-    "y": 932.28572300502242,
-    "z": 7005,
+    "x": 454.57144601004455,
+    "y": 933.71429443359386,
+    "z": 7009,
     "height": 64.285714285714292,
-    "width": 217.14285714285717,
-    "tabOrder": 7005
+    "width": 144.28571428571431,
+    "tabOrder": 7009
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "BBDD"
+                      "Entity": "dim_Carrera"
                     }
                   },
-                  "Property": "Codigo"
+                  "Property": "Responsable"
                 }
               },
-              "queryRef": "BBDD.Codigo",
-              "nativeQueryRef": "Código",
+              "queryRef": "dim_Carrera.Responsable",
+              "nativeQueryRef": "Grupo",
               "active": true,
-              "displayName": "Código"
+              "displayName": "Grupo"
             }
           ]
         }
@@ -51,15 +51,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [

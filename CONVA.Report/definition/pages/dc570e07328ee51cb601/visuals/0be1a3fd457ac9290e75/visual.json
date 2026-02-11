@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0be1a3fd457ac9290e75",
   "position": {
-    "x": 32.857142857142861,
-    "y": 1442.8571428571429,
+    "x": 11.428571428571429,
+    "y": 1097.1428571428571,
     "z": 7001,
     "height": 544.28571428571433,
-    "width": 1214.2857142857144,
+    "width": 1242.8571428571429,
     "tabOrder": 7001
   },
   "visual": {
@@ -101,6 +101,21 @@
                       "Entity": "BBDD"
                     }
                   },
+                  "Property": "ConvalidacionPaquete"
+                }
+              },
+              "queryRef": "BBDD.ConvalidacionPaquete",
+              "nativeQueryRef": "Tipo Paquete",
+              "displayName": "Tipo Paquete"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
                   "Property": "ResponsableConvalidacion"
                 }
               },
@@ -157,21 +172,6 @@
                       "Entity": "BBDD"
                     }
                   },
-                  "Property": "NombresCompletos"
-                }
-              },
-              "queryRef": "BBDD.NombresCompletos",
-              "nativeQueryRef": "Alumno",
-              "displayName": "Alumno"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "BBDD"
-                    }
-                  },
                   "Property": "ModalidadIngreso"
                 }
               },
@@ -192,35 +192,6 @@
               },
               "queryRef": "BBDD.InstitucionConvalidacion",
               "nativeQueryRef": "InstitucionConvalidacion"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "BBDD"
-                    }
-                  },
-                  "Property": "ConsejeroAdmision"
-                }
-              },
-              "queryRef": "BBDD.ConsejeroAdmision",
-              "nativeQueryRef": "ConsejeroAdmision"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "BBDD"
-                    }
-                  },
-                  "Property": "ConvalidacionPaquete"
-                }
-              },
-              "queryRef": "BBDD.ConvalidacionPaquete",
-              "nativeQueryRef": "Tipo Paquete",
-              "displayName": "Tipo Paquete"
             }
           ]
         }
@@ -246,20 +217,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "208.6355402893417D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "BBDD.NombresCompletos"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "201.33334254836024D"
                 }
               }
@@ -267,6 +224,20 @@
           },
           "selector": {
             "metadata": "BBDD.InstitucionConvalidacion"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "237.28571853641049D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BBDD.Carrera"
           }
         }
       ],

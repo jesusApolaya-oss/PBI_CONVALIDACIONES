@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "0d5d66e0d0800ad43389",
+  "name": "eeb6340f6e54afc8a3ac",
   "position": {
-    "x": 1007.9999999999999,
-    "y": 0,
-    "z": 16000,
+    "x": 1087.1428571428571,
+    "y": 84.285714285714292,
+    "z": 27001,
     "height": 80,
-    "width": 80,
-    "tabOrder": 16000
+    "width": 97.142857142857153,
+    "tabOrder": 27001
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'cerrado.png'"
+                      "Value": "'apps_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "cerrado30725465563287635.png"
+                      "ItemName": "apps_24dp_1F1F1F_FILL0_wght4008897951358513478.svg"
                     }
                   }
                 },
@@ -42,10 +42,22 @@
                 }
               }
             },
-            "effects": {
+            "backgroundEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.6
+                    }
+                  }
                 }
               }
             }
@@ -54,47 +66,6 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Conv. Cerradas'"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "visualLink": [
         {
           "properties": {
@@ -115,14 +86,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'949fd22bc25b95793ec2'"
-                }
-              }
-            },
-            "showDefaultTooltip": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'3ebaee7753ca2a099fc1'"
                 }
               }
             }
@@ -136,6 +100,52 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Utilitarios'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
