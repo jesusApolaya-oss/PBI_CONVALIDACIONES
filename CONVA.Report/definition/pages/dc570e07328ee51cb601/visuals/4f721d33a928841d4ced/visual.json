@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "4f721d33a928841d4ced",
   "position": {
-    "x": 432,
-    "y": 576,
+    "x": 446.857177734375,
+    "y": 904.00005231584828,
     "z": 6000,
     "height": 336,
     "width": 720,
@@ -20,19 +20,17 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Sede"
+                      "Entity": "BBDD"
                     }
                   },
-                  "Property": "CAMP"
+                  "Property": "Campus"
                 }
               },
-              "queryRef": "dim_Sede.CAMP",
+              "queryRef": "BBDD.Campus",
               "nativeQueryRef": "Campus",
-              "active": true,
-              "displayName": "Campus"
+              "active": true
             }
-          ],
-          "showAll": true
+          ]
         },
         "Series": {
           "projections": [

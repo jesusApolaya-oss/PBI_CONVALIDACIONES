@@ -1201,7 +1201,7 @@ cultureInfo es-MX
 			          }
 			        },
 			        {
-			          "Sede": {
+			          "Campus": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1211,7 +1211,7 @@ cultureInfo es-MX
 			          }
 			        },
 			        {
-			          "Campus": {
+			          "Sede": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2225,6 +2225,16 @@ cultureInfo es-MX
 			        },
 			        {
 			          "Grupos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "GrupoConvalidación": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5783,9 +5793,6 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "campus": {
@@ -5949,9 +5956,6 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "campus": {
@@ -6115,6 +6119,9 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "dim campus": {
@@ -6168,6 +6175,9 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "responsable": {
@@ -6184,6 +6194,9 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "campus": {
@@ -6230,6 +6243,9 @@ cultureInfo es-MX
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "id campus": {
@@ -7728,44 +7744,9 @@ cultureInfo es-MX
 			        "dim_campus": {
 			          "Target": {
 			            "Entity": "dim_campus"
-			          },
-			          "Nouns": [
-			            {
-			              "campus": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bbdd"
-			            },
-			            "Object": {
-			              "Role": "dim_campus"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "bbdds_have_dim_campuses"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campus"
-			            },
-			            "Object": {
-			              "Role": "bbdd"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campuses_have_bbdds"
-			        }
-			      ]
+			      }
 			    },
 			    "bbdd_has_calendario_FechaCompletoConvalidacion": {
 			      "Binding": {
@@ -9521,105 +9502,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "dim_campus_has_id_campus": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Campus"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_campus": {
-			          "Target": {
-			            "Entity": "dim_campus"
-			          }
-			        },
-			        "dim_campus.id_campus": {
-			          "Target": {
-			            "Entity": "dim_campus.id_campus"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campus"
-			            },
-			            "Object": {
-			              "Role": "dim_campus.id_campus"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campuses_have_id_campuses"
-			        }
-			      ]
-			    },
-			    "dim_campus_has_campus": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Campus"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_campus": {
-			          "Target": {
-			            "Entity": "dim_campus"
-			          }
-			        },
-			        "dim_campus.campus": {
-			          "Target": {
-			            "Entity": "dim_campus.campus"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campus"
-			            },
-			            "Object": {
-			              "Role": "dim_campus.campus"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campuses_have_campuses"
-			        }
-			      ]
-			    },
-			    "dim_campus_has_responsable": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Campus"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_campus": {
-			          "Target": {
-			            "Entity": "dim_campus"
-			          }
-			        },
-			        "dim_campus.responsable": {
-			          "Target": {
-			            "Entity": "dim_campus.responsable"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campus"
-			            },
-			            "Object": {
-			              "Role": "dim_campus.responsable"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campuses_have_responsables"
-			        }
-			      ]
-			    },
 			    "productividad_has_id_campus": {
 			      "Binding": {
 			        "ConceptualEntity": "Productividad"
@@ -9719,6 +9601,39 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
+			    "productividad_has_campus": {
+			      "Binding": {
+			        "ConceptualEntity": "Productividad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productividad": {
+			          "Target": {
+			            "Entity": "productividad"
+			          }
+			        },
+			        "productividad.campus": {
+			          "Target": {
+			            "Entity": "productividad.campus"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productividad"
+			            },
+			            "Object": {
+			              "Role": "productividad.campus"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productividads_have_campuses"
+			        }
+			      ]
+			    },
 			    "productividad_has_grupo": {
 			      "Binding": {
 			        "ConceptualEntity": "Productividad"
@@ -9782,6 +9697,39 @@ cultureInfo es-MX
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "bbdds_have_id_campuses"
+			        }
+			      ]
+			    },
+			    "bbdd_has_campus": {
+			      "Binding": {
+			        "ConceptualEntity": "BBDD"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bbdd": {
+			          "Target": {
+			            "Entity": "bbdd"
+			          }
+			        },
+			        "bbdd.campus": {
+			          "Target": {
+			            "Entity": "bbdd.campus"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bbdd"
+			            },
+			            "Object": {
+			              "Role": "bbdd.campus"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bbdds_have_campuses"
 			        }
 			      ]
 			    },
@@ -15686,44 +15634,9 @@ cultureInfo es-MX
 			        "dim_campus": {
 			          "Target": {
 			            "Entity": "dim_campus"
-			          },
-			          "Nouns": [
-			            {
-			              "campus": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "productividad"
-			            },
-			            "Object": {
-			              "Role": "dim_campus"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "productividads_have_dim_campuses"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campus"
-			            },
-			            "Object": {
-			              "Role": "productividad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campuses_have_productividads"
-			        }
-			      ]
+			      }
 			    },
 			    "ad_033_has_dim_carrera": {
 			      "Binding": {

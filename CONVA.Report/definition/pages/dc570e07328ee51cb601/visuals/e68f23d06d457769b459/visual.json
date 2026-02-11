@@ -20,19 +20,17 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Sede"
+                      "Entity": "BBDD"
                     }
                   },
-                  "Property": "CAMP"
+                  "Property": "Campus"
                 }
               },
-              "queryRef": "dim_Sede.CAMP",
+              "queryRef": "BBDD.Campus",
               "nativeQueryRef": "Campus",
-              "active": true,
-              "displayName": "Campus"
+              "active": true
             }
-          ],
-          "showAll": true
+          ]
         },
         "Y": {
           "projections": [

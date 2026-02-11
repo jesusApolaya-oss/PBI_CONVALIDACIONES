@@ -20,19 +20,17 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Sede"
+                      "Entity": "BBDD"
                     }
                   },
-                  "Property": "CAMP"
+                  "Property": "Campus"
                 }
               },
-              "queryRef": "dim_Sede.CAMP",
+              "queryRef": "BBDD.Campus",
               "nativeQueryRef": "Campus",
-              "active": true,
-              "displayName": "Campus"
+              "active": true
             }
-          ],
-          "showAll": true
+          ]
         },
         "Values": {
           "projections": [
@@ -429,22 +427,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ebea4569a22e446079b9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "BBDD"
-              }
-            },
-            "Property": "EstudianteEntregoDocumentosParaConvalidacion"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User",
-        "isLockedInViewMode": true
-      },
-      {
         "name": "cd26750301b568a60641",
         "field": {
           "Column": {
@@ -507,68 +489,6 @@
         "isLockedInViewMode": true
       },
       {
-        "name": "af0e4a369b3d145b4d00",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "BBDD"
-              }
-            },
-            "Property": "Estado"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "b",
-              "Entity": "BBDD",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "b"
-                          }
-                        },
-                        "Property": "Estado"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Cerrado'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Pendiente'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "isLockedInViewMode": true
-      },
-      {
         "name": "572e0d26908338547388",
         "field": {
           "Column": {
@@ -582,6 +502,48 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "e3bf597f7acec93d342e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Regulares"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2ab970bd5af0245aa19b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Paquetes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a7c9a2aa6bf93a05607e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Dentro/Fuera SLA(conteo)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

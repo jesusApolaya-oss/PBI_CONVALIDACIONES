@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "a6995bdf04dbf1a43972",
+  "name": "277968ca6f4eadd08117",
   "position": {
-    "x": 113.47615269252242,
-    "y": 834.23812357584711,
-    "z": 0,
-    "height": 64,
-    "width": 144,
-    "tabOrder": 0
+    "x": 794.28571428571433,
+    "y": 1285.7142857142858,
+    "z": 7008,
+    "height": 64.285714285714292,
+    "width": 452.85714285714289,
+    "tabOrder": 7008
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "BBDD"
                     }
                   },
-                  "Property": "Tipo paquete"
+                  "Property": "Carrera"
                 }
               },
-              "queryRef": "BBDD.Tipo paquete",
-              "nativeQueryRef": "Tipo paquete",
+              "queryRef": "BBDD.Carrera",
+              "nativeQueryRef": "Carrera",
               "active": true
             }
           ]
@@ -50,7 +50,15 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ],
       "selection": [

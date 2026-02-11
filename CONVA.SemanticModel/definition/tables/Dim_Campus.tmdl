@@ -1,29 +1,39 @@
 table Dim_Campus
+	isHidden
 	excludeFromModelRefresh
 	lineageTag: 18cf4449-e181-4f43-b794-ff5242065e1a
 
 	column Responsable
 		dataType: string
+		isHidden
 		lineageTag: c1c25ddc-0a84-4579-a57c-0ebc4204a9a6
 		summarizeBy: none
 		sourceColumn: Responsable
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column Campus
 		dataType: string
+		isHidden
 		lineageTag: b75234a6-437c-4cd2-8981-361383ed3f91
 		summarizeBy: none
 		sourceColumn: Campus
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'ID CAMPUS'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: be6071e3-7f35-4fb7-bdc5-b7fe096cab82
 		summarizeBy: sum
 		sourceColumn: ID CAMPUS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -38,6 +48,8 @@ table Dim_Campus
 				    #"Índice agregado" = Table.AddIndexColumn(Dim_Campus_Table, "ID CAMPUS", 1, 1, Int64.Type)
 				in
 				    #"Índice agregado"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navegación
 

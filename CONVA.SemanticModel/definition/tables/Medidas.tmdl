@@ -245,7 +245,7 @@ table Medidas
 
 	measure 'Total por Responsable' = ```
 			
-			COUNT ( BBDD[ResponsableConvalidacion] )
+			COUNT ( BBDD[Codigo] )
 			
 			```
 		formatString: 0

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "a6995bdf04dbf1a43972",
+  "name": "2b1d2eabd155d0bfd692",
   "position": {
-    "x": 113.47615269252242,
-    "y": 834.23812357584711,
-    "z": 0,
-    "height": 64,
-    "width": 144,
-    "tabOrder": 0
+    "x": 234.85713413783478,
+    "y": 1282.2856794084819,
+    "z": 7002,
+    "height": 64.285714285714292,
+    "width": 144.28571428571431,
+    "tabOrder": 7002
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "BBDD"
                     }
                   },
-                  "Property": "Tipo paquete"
+                  "Property": "Campus"
                 }
               },
-              "queryRef": "BBDD.Tipo paquete",
-              "nativeQueryRef": "Tipo paquete",
+              "queryRef": "BBDD.Campus",
+              "nativeQueryRef": "Campus",
               "active": true
             }
           ]

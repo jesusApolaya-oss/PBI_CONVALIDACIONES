@@ -72,6 +72,20 @@
                       "Entity": "BBDD"
                     }
                   },
+                  "Property": "Campus"
+                }
+              },
+              "queryRef": "BBDD.Campus",
+              "nativeQueryRef": "Campus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BBDD"
+                    }
+                  },
                   "Property": "Carrera"
                 }
               },
@@ -91,21 +105,6 @@
               },
               "queryRef": "BBDD.Programa",
               "nativeQueryRef": "Programa"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_Sede"
-                    }
-                  },
-                  "Property": "CAMP"
-                }
-              },
-              "queryRef": "dim_Sede.CAMP",
-              "nativeQueryRef": "Sede",
-              "displayName": "Sede"
             },
             {
               "field": {

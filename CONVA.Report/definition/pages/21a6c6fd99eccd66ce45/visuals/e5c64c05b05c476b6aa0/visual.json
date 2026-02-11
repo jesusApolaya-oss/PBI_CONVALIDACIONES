@@ -1291,6 +1291,118 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "0e36644debdd3860ea30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Carrera"
+              }
+            },
+            "Property": "Responsable"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cd7ca9a751e1749688f2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Dentro (conteo)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83f3f62dc82b805212f4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Fuera (conteo)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "aefa5972ee10fbd6aa2f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Dentro/Fuera SLA(conteo)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ddc59864a110560300ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Paquetes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "42a572060a5a81999264",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Regulares"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6c24aba2924a4aaa423a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% SLA Dentro"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1305ee4185c92f7bffce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% SLA Fuera"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -3,8 +3,212 @@
   "name": "dc570e07328ee51cb601",
   "displayName": "ProcedenciaEstudiante",
   "displayOption": "ActualSize",
-  "height": 1200,
+  "height": 2000,
   "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f20c9dd5c756df56d9ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Est_prev"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BBDD",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Est_prev"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Egresado'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "772f9856807439c734f9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Estado"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BBDD",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Estado"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'No Iniciado - Admisión'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "4d903188bfbca23e1d39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Campaña formato"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BBDD",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "Campaña formato"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026-01'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
   "visibility": "HiddenInViewMode",
   "visualInteractions": [
     {
@@ -15,6 +219,156 @@
     {
       "source": "a6995bdf04dbf1a43972",
       "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "4f721d33a928841d4ced",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "a4abfbc7cfb40a87a233",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "a6995bdf04dbf1a43972",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "e1d8365d242ee0d1053a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "e2657b9886f9bb1195ef",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd7215be22aaca2ca36d",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "4f721d33a928841d4ced",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "a4abfbc7cfb40a87a233",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "a6995bdf04dbf1a43972",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "e1d8365d242ee0d1053a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2b1d2eabd155d0bfd692",
+      "target": "e2657b9886f9bb1195ef",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "4f721d33a928841d4ced",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "a4abfbc7cfb40a87a233",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "a6995bdf04dbf1a43972",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "e1d8365d242ee0d1053a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f2244bd004a61d560c06",
+      "target": "e2657b9886f9bb1195ef",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "4f721d33a928841d4ced",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "a4abfbc7cfb40a87a233",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "a6995bdf04dbf1a43972",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "e1d8365d242ee0d1053a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2e5b8089dc829144ccdd",
+      "target": "e2657b9886f9bb1195ef",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "4f721d33a928841d4ced",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "a4abfbc7cfb40a87a233",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "a6995bdf04dbf1a43972",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "e1d8365d242ee0d1053a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "e68f23d06d457769b459",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6ffc71ef4ab30c0b3511",
+      "target": "e2657b9886f9bb1195ef",
       "type": "NoFilter"
     }
   ]
