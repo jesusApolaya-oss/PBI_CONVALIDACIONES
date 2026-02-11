@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "be5185c6eb5c80bc86bb",
+  "name": "92ce8c024a1809842d6a",
   "position": {
-    "x": 204.57144601004464,
+    "x": 480.28573172433045,
     "y": 229.42858014787953,
-    "z": 4,
+    "z": 6,
     "height": 168.57142857142858,
     "width": 260,
-    "tabOrder": 4
+    "tabOrder": 6
   },
   "visual": {
     "visualType": "image",
@@ -54,8 +54,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0.4
+                      "ColorId": 8,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -106,7 +106,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'APP 2025G'"
+                  "Value": "'APP 2025G PAQUETES'"
                 }
               }
             },

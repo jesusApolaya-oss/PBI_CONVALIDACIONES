@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "961220d3e17312ae452f",
   "position": {
-    "x": 310,
-    "y": 530,
+    "x": 750.28573172433016,
+    "y": 229.42858014787953,
     "z": 5,
     "height": 168.57142857142858,
     "width": 274.28571428571428,
@@ -41,6 +41,25 @@
                   }
                 }
               }
+            },
+            "backgroundEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -68,6 +87,52 @@
               "expr": {
                 "Literal": {
                   "Value": "'https://educorpperu.sharepoint.com/:u:/s/OPERACIONESACADMICAS_izhusr/IQDxzeGB1uTtSr8vva1oKWDiAbz1OXWee2Ee8pPqq8b2Ib8?e=d06JDV'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MACRO MALLA 2023'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
