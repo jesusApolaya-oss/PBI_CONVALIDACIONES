@@ -7092,15 +7092,8 @@ cultureInfo es-MX
 			          "fecha aprob doc curso": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
 			        }
-			      ],
-			      "SemanticType": "Time"
+			      ]
 			    },
 			    "ad_033.retencion_dm": {
 			      "Definition": {

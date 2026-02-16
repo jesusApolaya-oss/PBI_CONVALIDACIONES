@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "822744f51c1d0729cac0",
   "position": {
-    "x": 16.25,
-    "y": 912.5,
+    "x": 16,
+    "y": 912,
     "z": 17000,
-    "height": 717.5,
-    "width": 256.25,
+    "height": 752,
+    "width": 256,
     "tabOrder": 17000
   },
   "visual": {
@@ -59,14 +59,14 @@
                           "Entity": "BBDD"
                         }
                       },
-                      "Property": "Fecha_Recep"
+                      "Property": "Codigo"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Min(BBDD.Fecha_Recep)",
-              "nativeQueryRef": "Recuento de Fecha_Recep",
+              "queryRef": "Min(BBDD.Codigo)",
+              "nativeQueryRef": "Recuento de Codigo",
               "displayName": "Ingreso"
             }
           ]
@@ -153,36 +153,6 @@
           },
           "selector": {
             "metadata": "BBDD.Sem"
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(BBDD.Fecha_Recep)"
           }
         }
       ]

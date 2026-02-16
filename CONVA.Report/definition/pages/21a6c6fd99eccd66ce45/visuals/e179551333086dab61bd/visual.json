@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e179551333086dab61bd",
   "position": {
-    "x": 287.5,
-    "y": 912.5,
+    "x": 288,
+    "y": 912,
     "z": 4000,
-    "height": 717.5,
-    "width": 256.25,
+    "height": 752,
+    "width": 256,
     "tabOrder": 4000
   },
   "visual": {
@@ -61,14 +61,14 @@
                           "Entity": "BBDD"
                         }
                       },
-                      "Property": "FechaCompletoConvalidacion"
+                      "Property": "Codigo"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Min(BBDD.FechaCompletoConvalidacion)",
-              "nativeQueryRef": "Recuento de FechaCompletoConvalidacion",
+              "queryRef": "Min(BBDD.Codigo)",
+              "nativeQueryRef": "Ejecutado",
               "displayName": "Ejecutado"
             }
           ]
@@ -142,36 +142,6 @@
           },
           "selector": {
             "metadata": "Calendario FechaCompletoConvalidacion.Año - Sem"
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(BBDD.FechaCompletoConvalidacion)"
           }
         }
       ]
@@ -285,13 +255,6 @@
                     }
                   ],
                   "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Pendiente'"
-                        }
-                      }
-                    ],
                     [
                       {
                         "Literal": {
@@ -434,6 +397,53 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "e9dc7f4b1eba16e826c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendario FechaCompletoConvalidacion"
+              }
+            },
+            "Property": "Año - Sem"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "20ea66a6fd9c6e0c8007",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BBDD"
+              }
+            },
+            "Property": "Fecha CompletoConvalidacion"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0342aee3d196f3d855ab",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BBDD"
+                  }
+                },
+                "Property": "Codigo"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

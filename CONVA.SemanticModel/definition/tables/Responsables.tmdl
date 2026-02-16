@@ -1,4 +1,5 @@
 table Responsables
+	excludeFromModelRefresh
 	lineageTag: 980e3b0d-5ebc-4d0b-ade2-4a295ae5ea16
 
 	column Grupo
@@ -261,5 +262,5 @@ table Responsables
 
 	annotation PBI_NavigationStepName = Navegación
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 
