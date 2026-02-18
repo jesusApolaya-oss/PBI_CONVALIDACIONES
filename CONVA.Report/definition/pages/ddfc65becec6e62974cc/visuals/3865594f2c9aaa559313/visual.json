@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "545e91648637bc9dd1f8",
+  "name": "3865594f2c9aaa559313",
   "position": {
-    "x": 672.5,
-    "y": 512.5,
-    "z": 3000,
-    "height": 808.75,
-    "width": 607.5,
-    "tabOrder": 3000
+    "x": 655.71428571428578,
+    "y": 512.85714285714289,
+    "z": 8001,
+    "height": 808.57142857142867,
+    "width": 607.14285714285722,
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "tableEx",
@@ -76,6 +76,34 @@
               },
               "queryRef": "AD033.OBSERVACION",
               "nativeQueryRef": "OBSERVACION"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConvaErrores"
+                    }
+                  },
+                  "Property": "ConvalidacionPaquete"
+                }
+              },
+              "queryRef": "ConvaErrores.ConvalidacionPaquete",
+              "nativeQueryRef": "ConvalidacionPaquete"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConvaErrores"
+                    }
+                  },
+                  "Property": "FechaCompletoConvalidacion"
+                }
+              },
+              "queryRef": "ConvaErrores.FechaCompletoConvalidacion",
+              "nativeQueryRef": "FechaCompletoConvalidacion"
             }
           ]
         }
@@ -337,13 +365,82 @@
             "Property": "Paquete"
           }
         },
+        "type": "Advanced",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "cff6d7e7d63e8e5ce6dd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "AD033"
+                  }
+                },
+                "Property": "SUBMODALIDAD INGRESO"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1712e89c0bda7a09fa59",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "AD033"
+              }
+            },
+            "Property": "PROGRAMA"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c1ce3db2481e09ce6fb6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "AD033"
+              }
+            },
+            "Property": "ID ESTUDIANTE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d59f1eacc6d5c9533712",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ConvaErrores"
+              }
+            },
+            "Property": "ConvalidacionPaquete"
+          }
+        },
         "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "a",
-              "Entity": "AD033",
+              "Name": "c",
+              "Entity": "ConvaErrores",
               "Type": 0
             }
           ],
@@ -358,10 +455,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "a"
+                                "Source": "c"
                               }
                             },
-                            "Property": "Paquete"
+                            "Property": "ConvalidacionPaquete"
                           }
                         }
                       ],
@@ -369,14 +466,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'0'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'No aplica'"
+                              "Value": "null"
                             }
                           }
                         ]
@@ -388,7 +478,6 @@
             }
           ]
         },
-        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -404,6 +493,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "9a9090499de3aadfcd35",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ConvaErrores"
+              }
+            },
+            "Property": "FechaCompletoConvalidacion"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

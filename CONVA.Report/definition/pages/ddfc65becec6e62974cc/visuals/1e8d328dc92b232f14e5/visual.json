@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "1e8d328dc92b232f14e5",
   "position": {
-    "x": 0,
-    "y": 512.5,
+    "x": 17.142857142857142,
+    "y": 512.85714285714289,
     "z": 1000,
-    "height": 808.75,
-    "width": 656.25,
+    "height": 808.57142857142867,
+    "width": 622.85714285714289,
     "tabOrder": 1000
   },
   "visual": {
@@ -76,6 +76,20 @@
               },
               "queryRef": "AD033.OBSERVACION",
               "nativeQueryRef": "OBSERVACION"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConvaErrores"
+                    }
+                  },
+                  "Property": "FechaCompletoConvalidacion"
+                }
+              },
+              "queryRef": "ConvaErrores.FechaCompletoConvalidacion",
+              "nativeQueryRef": "FechaCompletoConvalidacion"
             }
           ]
         }
@@ -326,7 +340,26 @@
         }
       },
       {
-        "name": "d7b10050695a51b15391",
+        "name": "5e9f2a926607c0e4d5e0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "AD033"
+                  }
+                },
+                "Property": "SUBMODALIDAD INGRESO"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7c100d3198d705252b4f",
         "field": {
           "Column": {
             "Expression": {
@@ -334,7 +367,35 @@
                 "Entity": "AD033"
               }
             },
-            "Property": "Paquete"
+            "Property": "PROGRAMA"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e68eb1c4f5320d0cb65f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "AD033"
+              }
+            },
+            "Property": "ID ESTUDIANTE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d96ae0776ac9780bf18c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ConvaErrores"
+              }
+            },
+            "Property": "ConvalidacionPaquete"
           }
         },
         "type": "Categorical",
@@ -342,8 +403,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "a",
-              "Entity": "AD033",
+              "Name": "c",
+              "Entity": "ConvaErrores",
               "Type": 0
             }
           ],
@@ -356,10 +417,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "a"
+                            "Source": "c"
                           }
                         },
-                        "Property": "Paquete"
+                        "Property": "ConvalidacionPaquete"
                       }
                     }
                   ],
@@ -367,14 +428,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'0'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'No aplica'"
+                          "Value": "null"
                         }
                       }
                     ]
@@ -384,14 +438,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }

@@ -60,3 +60,7 @@ relationship AutoDetected_45e5221f-b867-4cb8-afb7-e6ee315057d0
 	fromColumn: AD033.'ID Carrera'
 	toColumn: dim_Carrera.'ID Carrera'
 
+relationship AutoDetected_3eed20fd-1861-4fa8-a0b0-8d6364b78447
+	fromColumn: AD033.'ConvaErrores.ID ConvaErrores'
+	toColumn: ConvaErrores.'ID ConvaErrores'
+

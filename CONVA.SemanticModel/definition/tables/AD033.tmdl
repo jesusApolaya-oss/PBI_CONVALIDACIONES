@@ -266,6 +266,15 @@ table AD033
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'ConvaErrores.ID ConvaErrores'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f321782-f701-49de-bd91-444e7bf1e92b
+		summarizeBy: none
+		sourceColumn: ConvaErrores.ID ConvaErrores
+
+		annotation SummarizationSetBy = Automatic
+
 	partition AD033 = m
 		mode: import
 		source =
@@ -278,9 +287,11 @@ table AD033
 				    #"Se expandió dim_Carrera" = Table.ExpandTableColumn(#"Consultas combinadas", "dim_Carrera", {"ID Carrera"}, {"ID Carrera"}),
 				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió dim_Carrera", {"ID ESTUDIANTE"}, BBDD, {"Codigo"}, "BBDD", JoinKind.LeftOuter),
 				    #"Se expandió BBDD" = Table.ExpandTableColumn(#"Consultas combinadas1", "BBDD", {"ConvalidacionPaquete"}, {"ConvalidacionPaquete"}),
-				    #"Errores reemplazados" = Table.ReplaceErrorValues(#"Se expandió BBDD", {{"Paquete", ""}})
+				    #"Errores reemplazados" = Table.ReplaceErrorValues(#"Se expandió BBDD", {{"Paquete", ""}}),
+				    #"Consultas combinadas2" = Table.NestedJoin(#"Errores reemplazados", {"ID ESTUDIANTE"}, ConvaErrores, {"Codigo"}, "ConvaErrores", JoinKind.LeftOuter),
+				    #"Se expandió ConvaErrores" = Table.ExpandTableColumn(#"Consultas combinadas2", "ConvaErrores", {"ID ConvaErrores"}, {"ConvaErrores.ID ConvaErrores"})
 				in
-				    #"Errores reemplazados"
+				    #"Se expandió ConvaErrores"
 
 	annotation PBI_NavigationStepName = Navegación
 
