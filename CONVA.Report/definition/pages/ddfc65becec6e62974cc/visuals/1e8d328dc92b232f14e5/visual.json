@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "1e8d328dc92b232f14e5",
   "position": {
-    "x": 17.142857142857142,
+    "x": 0,
     "y": 512.85714285714289,
     "z": 1000,
     "height": 808.57142857142867,
@@ -82,14 +82,28 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ConvaErrores"
+                      "Entity": "ConvaErroresRegular"
                     }
                   },
                   "Property": "FechaCompletoConvalidacion"
                 }
               },
-              "queryRef": "ConvaErrores.FechaCompletoConvalidacion",
+              "queryRef": "ConvaErroresRegular.FechaCompletoConvalidacion",
               "nativeQueryRef": "FechaCompletoConvalidacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConvaErroresRegular"
+                    }
+                  },
+                  "Property": "ResponsableConvalidacion"
+                }
+              },
+              "queryRef": "ConvaErroresRegular.ResponsableConvalidacion",
+              "nativeQueryRef": "ResponsableConvalidacion"
             }
           ]
         }
@@ -392,7 +406,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ConvaErrores"
+                "Entity": "ConvaErroresPaquete"
               }
             },
             "Property": "ConvalidacionPaquete"
@@ -404,7 +418,7 @@
           "From": [
             {
               "Name": "c",
-              "Entity": "ConvaErrores",
+              "Entity": "ConvaErroresPaquete",
               "Type": 0
             }
           ],

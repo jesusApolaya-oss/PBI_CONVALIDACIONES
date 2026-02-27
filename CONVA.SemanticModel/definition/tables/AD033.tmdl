@@ -2,14 +2,12 @@ table AD033
 	lineageTag: ffcbdc15-8c71-41a3-bc55-e29f6725af20
 
 	column PERIODO
-		dataType: double
+		dataType: string
 		lineageTag: 0f7381c7-62a3-4843-81cb-5ef67fe92b8b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: PERIODO
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column CAMPUS
 		dataType: string
@@ -92,14 +90,12 @@ table AD033
 		annotation SummarizationSetBy = Automatic
 
 	column 'PERIODO ATRIBUTO'
-		dataType: double
+		dataType: string
 		lineageTag: 1083394b-b8a4-4476-8786-68cbde66269b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: PERIODO ATRIBUTO
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ATRIBUTOS
 		dataType: string
@@ -110,7 +106,8 @@ table AD033
 		annotation SummarizationSetBy = Automatic
 
 	column 'FECHA APROB DOC CURSOS'
-		dataType: string
+		dataType: dateTime
+		formatString: General Date
 		lineageTag: 341bc5d5-d01b-4428-ba18-69e9c1002ba5
 		summarizeBy: none
 		sourceColumn: FECHA APROB DOC CURSOS
@@ -266,12 +263,21 @@ table AD033
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'ConvaErrores.ID ConvaErrores'
+	column 'ID ConvaErrores'
 		dataType: int64
 		formatString: 0
-		lineageTag: 2f321782-f701-49de-bd91-444e7bf1e92b
+		lineageTag: e38510b6-9286-494c-bc71-ce6fec1438fb
 		summarizeBy: none
-		sourceColumn: ConvaErrores.ID ConvaErrores
+		sourceColumn: ID ConvaErrores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID ConvaRegular'
+		dataType: int64
+		formatString: 0
+		lineageTag: 30fcea2f-4870-4b8b-8aae-0b05d3104b3a
+		summarizeBy: none
+		sourceColumn: ID ConvaRegular
 
 		annotation SummarizationSetBy = Automatic
 
@@ -288,10 +294,12 @@ table AD033
 				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió dim_Carrera", {"ID ESTUDIANTE"}, BBDD, {"Codigo"}, "BBDD", JoinKind.LeftOuter),
 				    #"Se expandió BBDD" = Table.ExpandTableColumn(#"Consultas combinadas1", "BBDD", {"ConvalidacionPaquete"}, {"ConvalidacionPaquete"}),
 				    #"Errores reemplazados" = Table.ReplaceErrorValues(#"Se expandió BBDD", {{"Paquete", ""}}),
-				    #"Consultas combinadas2" = Table.NestedJoin(#"Errores reemplazados", {"ID ESTUDIANTE"}, ConvaErrores, {"Codigo"}, "ConvaErrores", JoinKind.LeftOuter),
-				    #"Se expandió ConvaErrores" = Table.ExpandTableColumn(#"Consultas combinadas2", "ConvaErrores", {"ID ConvaErrores"}, {"ConvaErrores.ID ConvaErrores"})
+				    #"Consultas combinadas2" = Table.NestedJoin(#"Errores reemplazados", {"ID ESTUDIANTE"}, ConvaErroresPaquete, {"Codigo"}, "ConvaErrores", JoinKind.LeftOuter),
+				    #"Se expandió ConvaErrores" = Table.ExpandTableColumn(#"Consultas combinadas2", "ConvaErrores", {"ID ConvaErrores"}, {"ID ConvaErrores"}),
+				    #"Consultas combinadas3" = Table.NestedJoin(#"Se expandió ConvaErrores", {"ID ESTUDIANTE"}, ConvaErroresRegular, {"Codigo"}, "ConvaErroresRegular", JoinKind.LeftOuter),
+				    #"Se expandió ConvaErroresRegular" = Table.ExpandTableColumn(#"Consultas combinadas3", "ConvaErroresRegular", {"ID ConvaRegular"}, {"ID ConvaRegular"})
 				in
-				    #"Se expandió ConvaErrores"
+				    #"Se expandió ConvaErroresRegular"
 
 	annotation PBI_NavigationStepName = Navegación
 

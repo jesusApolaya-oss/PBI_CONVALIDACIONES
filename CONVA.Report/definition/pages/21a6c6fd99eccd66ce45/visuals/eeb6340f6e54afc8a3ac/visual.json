@@ -79,7 +79,7 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'PageNavigation'"
+                  "Value": "'WebUrl'"
                 }
               }
             },
@@ -87,6 +87,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'3ebaee7753ca2a099fc1'"
+                }
+              }
+            },
+            "webUrl": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://educorpperu.sharepoint.com/:f:/s/OPERACIONESACADMICAS_izhusr/IgB27hH44WH2RIufuo0xHdUfAWjutmUPsBkTaCyAaL139XM?e=DUbuwh'"
                 }
               }
             }

@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 26.003591975025728
       },
       "nodes": [
         {
@@ -222,11 +222,24 @@
         },
         {
           "location": {
-            "x": 1889.5555319752375,
-            "y": 459.53736810738428
+            "x": 998.93250683060637,
+            "y": 1228.8102973685623
           },
-          "nodeIndex": "ConvaErrores",
+          "nodeIndex": "ConvaErroresPaquete",
           "nodeLineageTag": "09f0c123-89f2-428f-9a5e-274e539ad39e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1360.5098796365166,
+            "y": 1252.6469233456689
+          },
+          "nodeIndex": "ConvaErroresRegular",
+          "nodeLineageTag": "a6e1afcc-a62f-4d86-b34c-9a5b295fc855",
           "size": {
             "height": 200,
             "width": 234

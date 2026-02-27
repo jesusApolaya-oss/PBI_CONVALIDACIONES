@@ -1,0 +1,72 @@
+table ConvaErroresRegular
+	lineageTag: a6e1afcc-a62f-4d86-b34c-9a5b295fc855
+
+	column Campania
+		dataType: string
+		lineageTag: 305a7889-ac2b-4806-beb2-7bfb86d967e3
+		summarizeBy: none
+		sourceColumn: Campania
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: string
+		lineageTag: cd00a30f-ff93-4cb5-909a-54510509eb75
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCompletoConvalidacion
+		dataType: string
+		lineageTag: 8c8d6cb5-3436-4d0b-8c1e-608754a68332
+		summarizeBy: none
+		sourceColumn: FechaCompletoConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvalidacionPaquete
+		dataType: string
+		lineageTag: 6d6d5ecf-ef94-438d-ab8a-71af91a8479f
+		summarizeBy: none
+		sourceColumn: ConvalidacionPaquete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID ConvaRegular'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b277099-9bb6-44ec-aef4-065119b13413
+		summarizeBy: none
+		sourceColumn: ID ConvaRegular
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponsableConvalidacion
+		dataType: string
+		lineageTag: 54916dd9-d951-4ba7-b75a-88d50b556846
+		summarizeBy: none
+		sourceColumn: ResponsableConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ConvaErroresRegular = m
+		mode: import
+		source =
+				let
+				    Origen = Conex,
+				    #"Conva xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/" = Origen{[Name="Conva.xlsx",#"Folder Path"="https://educorpperu.sharepoint.com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"]}[Content],
+				    #"Libro de Excel importado" = Excel.Workbook(#"Conva xlsx_https://educorpperu sharepoint com/sites/OPERACIONESACADMICAS_izhusr/Documentos compartidos/Reportes/Reporte de Convalidaciones/"),
+				    Sheet1_Sheet = #"Libro de Excel importado"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Encabezados promovidos",{"Campania", "Codigo", "FechaCompletoConvalidacion", "ResponsableConvalidacion", "ConvalidacionPaquete"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Otras columnas quitadas", each ([Campania] = "2026-01 PG" or [Campania] = "2026-01 WA") and ([ConvalidacionPaquete] = null or [ConvalidacionPaquete] = "No aplica                     ")),
+				    #"Duplicados quitados" = Table.Distinct(#"Filas filtradas", {"Codigo"}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "ID ConvaRegular", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

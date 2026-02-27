@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "f8fab320355aff4be822",
   "position": {
-    "x": 864,
-    "y": 1615.9999999999998,
+    "x": 863.75,
+    "y": 1526.25,
     "z": 27000,
-    "height": 47.999999999999993,
+    "height": 47.5,
     "width": 400,
     "tabOrder": 27000
   },
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Última actualización de los datos fue el 17/02/26 a las 09:10 am"
+                    "value": "Última actualización de los datos fue el 25/02/26"
                   }
                 ],
                 "horizontalTextAlignment": "center"

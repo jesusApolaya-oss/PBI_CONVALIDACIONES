@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "cade750ebf51f5bb46c1",
   "position": {
-    "x": 843.53134110787175,
-    "y": 1694.2223032069969,
+    "x": 835.74996948242188,
+    "y": 1616.9999542236328,
     "z": 21000,
     "height": 175,
     "width": 427.5,

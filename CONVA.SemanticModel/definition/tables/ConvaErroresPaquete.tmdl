@@ -1,4 +1,4 @@
-table ConvaErrores
+table ConvaErroresPaquete
 	lineageTag: 09f0c123-89f2-428f-9a5e-274e539ad39e
 
 	column Campania
@@ -43,7 +43,15 @@ table ConvaErrores
 
 		annotation SummarizationSetBy = Automatic
 
-	partition ConvaErrores = m
+	column ResponsableConvalidacion
+		dataType: string
+		lineageTag: 2560e027-75ca-4422-b155-56cec3d450e7
+		summarizeBy: none
+		sourceColumn: ResponsableConvalidacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ConvaErroresPaquete = m
 		mode: import
 		source =
 				let
@@ -53,7 +61,7 @@ table ConvaErrores
 				    Sheet1_Sheet = #"Libro de Excel importado"{[Item="Sheet1",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Column1", Int64.Type}, {"Sede", type text}, {"ConsejeroAdmision", type text}, {"EstudianteEntregoDocumentosParaConvalidacion", type text}, {"FechaNotificacionAcademia", type datetime}, {"Carrera", type text}, {"Programa", type text}, {"Campania", type text}, {"Codigo", type text}, {"ApellidoPaterno", type text}, {"ApellidoMaterno", type text}, {"Nombres", type text}, {"ModalidadIngreso", type text}, {"SubModalidadIngreso", type text}, {"EstadoConvalidacion", type text}, {"FechaCompletoConvalidacion", type datetime}, {"ResponsableConvalidacion", type text}, {"UltimoEstadoRevisionDocumento", type text}, {"InstitucionConvalidacion", type text}, {"VersionCRM", type text}, {"TieneConvalidacion", type text}, {"ConvalidacionPaquete", type text}}),
-				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Campania", "Codigo", "FechaCompletoConvalidacion", "ConvalidacionPaquete"}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Campania", "Codigo", "FechaCompletoConvalidacion", "ResponsableConvalidacion", "ConvalidacionPaquete"}),
 				    #"Filas filtradas" = Table.SelectRows(#"Otras columnas quitadas", each ([Campania] = "2026-01 PG" or [Campania] = "2026-01 WA") and ([ConvalidacionPaquete] <> null and [ConvalidacionPaquete] <> "No aplica                     ")),
 				    #"Duplicados quitados" = Table.Distinct(#"Filas filtradas", {"Codigo"}),
 				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "ID ConvaErrores", 1, 1, Int64.Type)

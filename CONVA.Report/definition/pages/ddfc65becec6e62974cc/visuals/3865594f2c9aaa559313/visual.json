@@ -6,7 +6,7 @@
     "y": 512.85714285714289,
     "z": 8001,
     "height": 808.57142857142867,
-    "width": 607.14285714285722,
+    "width": 624.28571428571433,
     "tabOrder": 8001
   },
   "visual": {
@@ -82,7 +82,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ConvaErrores"
+                      "Entity": "ConvaErroresPaquete"
                     }
                   },
                   "Property": "ConvalidacionPaquete"
@@ -96,7 +96,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ConvaErrores"
+                      "Entity": "ConvaErroresPaquete"
                     }
                   },
                   "Property": "FechaCompletoConvalidacion"
@@ -104,6 +104,20 @@
               },
               "queryRef": "ConvaErrores.FechaCompletoConvalidacion",
               "nativeQueryRef": "FechaCompletoConvalidacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConvaErroresPaquete"
+                    }
+                  },
+                  "Property": "ResponsableConvalidacion"
+                }
+              },
+              "queryRef": "ConvaErroresPaquete.ResponsableConvalidacion",
+              "nativeQueryRef": "ResponsableConvalidacion"
             }
           ]
         }
@@ -428,7 +442,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ConvaErrores"
+                "Entity": "ConvaErroresPaquete"
               }
             },
             "Property": "ConvalidacionPaquete"
@@ -440,7 +454,7 @@
           "From": [
             {
               "Name": "c",
-              "Entity": "ConvaErrores",
+              "Entity": "ConvaErroresPaquete",
               "Type": 0
             }
           ],
@@ -500,7 +514,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ConvaErrores"
+                "Entity": "ConvaErroresPaquete"
               }
             },
             "Property": "FechaCompletoConvalidacion"

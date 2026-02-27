@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["BBDD","dim_EstadoConvalidacion","dim_Sede","dim_ModalidadIngreso","dim_Carrera","Medidas","Actualización","Conex","Campaña","Responsables","Conva_Histo","Productividad","Dim_Campus","DimResponsableConvalidacion","AD033","ConvaErrores"]
+annotation PBI_QueryOrder = ["BBDD","dim_EstadoConvalidacion","dim_Sede","dim_ModalidadIngreso","dim_Carrera","Medidas","Actualización","Conex","Campaña","Responsables","Conva_Histo","Productividad","Dim_Campus","DimResponsableConvalidacion","AD033","ConvaErroresPaquete","ConvaErroresRegular"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -28,7 +28,8 @@ ref table Productividad
 ref table Dim_Campus
 ref table DimResponsableConvalidacion
 ref table AD033
-ref table ConvaErrores
+ref table ConvaErroresPaquete
+ref table ConvaErroresRegular
 
 ref cultureInfo es-MX
 
