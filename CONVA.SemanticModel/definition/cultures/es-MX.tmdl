@@ -205,6 +205,16 @@ cultureInfo es-MX
 			          }
 			        },
 			        {
+			          "Id Estudiante": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Código": {
 			            "State": "Suggested",
 			            "Source": {
@@ -7493,9 +7503,665 @@ cultureInfo es-MX
 			          }
 			        }
 			      ]
+			    },
+			    "ad_033.ID_ConvaErrore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AD033",
+			          "ConceptualProperty": "ID ConvaErrores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ID ConvaErrore": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "ad_033.ID_ConvaRegular": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "AD033",
+			          "ConceptualProperty": "ID ConvaRegular"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ID ConvaRegular": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conva errores paquete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conva errore paquete": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "ConvaErroresPaquete": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete.campania": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "Campania"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campania": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete.codigo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "Codigo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete.fecha_completo_convalidacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "FechaCompletoConvalidacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha completo convalidacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaCompletoConvalidacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "conva_errores_paquete.convalidacion_paquete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "ConvalidacionPaquete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "convalidacion paquete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ConvalidacionPaquete": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete.ID_ConvaErrore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "ID ConvaErrores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ID ConvaErrore": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential convaerrore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete.responsable_convalidacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresPaquete",
+			          "ConceptualProperty": "ResponsableConvalidacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "responsable convalidacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ResponsableConvalidacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conva errores regular": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conva errore regular": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "ConvaErroresRegular": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.campania": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "Campania"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campania": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.codigo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "Codigo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.fecha_completo_convalidacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "FechaCompletoConvalidacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha completo convalidacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaCompletoConvalidacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.convalidacion_paquete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "ConvalidacionPaquete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "convalidacion paquete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ConvalidacionPaquete": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.ID_ConvaRegular": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "ID ConvaRegular"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ID ConvaRegular": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential convaregular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "conva_errores_regular.responsable_convalidacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ConvaErroresRegular",
+			          "ConceptualProperty": "ResponsableConvalidacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "responsable convalidacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ResponsableConvalidacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "ad_033_has_conva_errores_regular": {
+			      "Binding": {
+			        "ConceptualEntity": "AD033"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ad_033": {
+			          "Target": {
+			            "Entity": "ad_033"
+			          }
+			        },
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ad_033"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ad_033_have_conva_errores_regulars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "ad_033"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_ad_033"
+			        }
+			      ]
+			    },
+			    "ad_033_has_conva_errores_paquete": {
+			      "Binding": {
+			        "ConceptualEntity": "AD033"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ad_033": {
+			          "Target": {
+			            "Entity": "ad_033"
+			          }
+			        },
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ad_033"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ad_033_have_conva_errores_paquetes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "ad_033"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_ad_033"
+			        }
+			      ]
+			    },
+			    "ad_033_has_dim_carrera": {
+			      "Binding": {
+			        "ConceptualEntity": "AD033"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ad_033": {
+			          "Target": {
+			            "Entity": "ad_033"
+			          }
+			        },
+			        "dim_carrera": {
+			          "Target": {
+			            "Entity": "dim_carrera"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ad_033"
+			            },
+			            "Object": {
+			              "Role": "dim_carrera"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ad_033_have_dim_carrera"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_carrera"
+			            },
+			            "Object": {
+			              "Role": "ad_033"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_carrera_have_ad_033"
+			        }
+			      ]
+			    },
+			    "productividad_has_dim_campus": {
+			      "Binding": {
+			        "ConceptualEntity": "Productividad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productividad": {
+			          "Target": {
+			            "Entity": "productividad"
+			          }
+			        },
+			        "dim_campus": {
+			          "Target": {
+			            "Entity": "dim_campus"
+			          }
+			        }
+			      }
+			    },
 			    "conva_histo_has_dim_carrera": {
 			      "Binding": {
 			        "ConceptualEntity": "Conva_Histo"
@@ -8073,6 +8739,369 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
+			    "conva_errores_regular_has_responsable_convalidacion": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.responsable_convalidacion": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.responsable_convalidacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.responsable_convalidacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_responsable_convalidacions"
+			        }
+			      ]
+			    },
+			    "conva_errores_regular_has_ID_ConvaRegular": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.ID_ConvaRegular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.ID_ConvaRegular"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.ID_ConvaRegular"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_ID_ConvaRegulars"
+			        }
+			      ]
+			    },
+			    "conva_errores_regular_has_convalidacion_paquete": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.convalidacion_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.convalidacion_paquete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.convalidacion_paquete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_convalidacion_paquetes"
+			        }
+			      ]
+			    },
+			    "conva_errores_regular_has_fecha_completo_convalidacion": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.fecha_completo_convalidacion": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.fecha_completo_convalidacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.fecha_completo_convalidacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_fecha_completo_convalidacions"
+			        }
+			      ]
+			    },
+			    "conva_errores_regular_has_codigo": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.codigo": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.codigo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.codigo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_codigos"
+			        }
+			      ]
+			    },
+			    "conva_errores_regular_has_campania": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresRegular"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_regular": {
+			          "Target": {
+			            "Entity": "conva_errores_regular"
+			          }
+			        },
+			        "conva_errores_regular.campania": {
+			          "Target": {
+			            "Entity": "conva_errores_regular.campania"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_regular"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_regular.campania"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_regulars_have_campania"
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete_has_ID_ConvaErrore": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresPaquete"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        },
+			        "conva_errores_paquete.ID_ConvaErrore": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete.ID_ConvaErrore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete.ID_ConvaErrore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_ID_ConvaErrores"
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete_has_convalidacion_paquete": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresPaquete"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        },
+			        "conva_errores_paquete.convalidacion_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete.convalidacion_paquete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete.convalidacion_paquete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_convalidacion_paquetes"
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete_has_fecha_completo_convalidacion": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresPaquete"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        },
+			        "conva_errores_paquete.fecha_completo_convalidacion": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete.fecha_completo_convalidacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete.fecha_completo_convalidacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_fecha_completo_convalidacions"
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete_has_codigo": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresPaquete"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        },
+			        "conva_errores_paquete.codigo": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete.codigo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete.codigo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_codigos"
+			        }
+			      ]
+			    },
+			    "conva_errores_paquete_has_campania": {
+			      "Binding": {
+			        "ConceptualEntity": "ConvaErroresPaquete"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conva_errores_paquete": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete"
+			          }
+			        },
+			        "conva_errores_paquete.campania": {
+			          "Target": {
+			            "Entity": "conva_errores_paquete.campania"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conva_errores_paquete"
+			            },
+			            "Object": {
+			              "Role": "conva_errores_paquete.campania"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conva_errores_paquetes_have_campania"
+			        }
+			      ]
+			    },
 			    "ad_033_has_convalidacion_paquete": {
 			      "Binding": {
 			        "ConceptualEntity": "AD033"
@@ -8499,19 +9528,6 @@ cultureInfo es-MX
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ad_033_have_grupo_inscripcions"
-			        },
-			        {
-			          "DynamicAdjective": {
-			            "Subject": {
-			              "Role": "ad_033"
-			            },
-			            "Adjective": {
-			              "Role": "ad_033.grupo_inscripcion"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grupo_inscripcions_describe_ad_033"
 			        }
 			      ]
 			    },
@@ -15623,38 +16639,20 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "productividad_has_dim_campus": {
+			    "conva_errores_paquete_has_dim_responsable_convalidacion": {
 			      "Binding": {
-			        "ConceptualEntity": "Productividad"
+			        "ConceptualEntity": "ConvaErroresPaquete"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "productividad": {
+			        "conva_errores_paquete": {
 			          "Target": {
-			            "Entity": "productividad"
+			            "Entity": "conva_errores_paquete"
 			          }
 			        },
-			        "dim_campus": {
+			        "dim_responsable_convalidacion": {
 			          "Target": {
-			            "Entity": "dim_campus"
-			          }
-			        }
-			      }
-			    },
-			    "ad_033_has_dim_carrera": {
-			      "Binding": {
-			        "ConceptualEntity": "AD033"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ad_033": {
-			          "Target": {
-			            "Entity": "ad_033"
-			          }
-			        },
-			        "dim_carrera": {
-			          "Target": {
-			            "Entity": "dim_carrera"
+			            "Entity": "dim_responsable_convalidacion"
 			          }
 			        }
 			      },
@@ -15662,28 +16660,28 @@ cultureInfo es-MX
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "ad_033"
+			              "Role": "conva_errores_paquete"
 			            },
 			            "Object": {
-			              "Role": "dim_carrera"
+			              "Role": "dim_responsable_convalidacion"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ad_033_have_dim_carrera"
+			          "ID": "conva_errores_paquetes_have_dim_responsable_convalidacions"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_carrera"
+			              "Role": "dim_responsable_convalidacion"
 			            },
 			            "Object": {
-			              "Role": "ad_033"
+			              "Role": "conva_errores_paquete"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_carrera_have_ad_033"
+			          "ID": "dim_responsable_convalidacions_have_conva_errores_paquetes"
 			        }
 			      ]
 			    }

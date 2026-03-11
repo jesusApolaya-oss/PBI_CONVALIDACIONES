@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "323b668c069808a8ab11",
+  "name": "611263cd1ee714700422",
   "position": {
-    "x": 478.75,
-    "y": 93.75,
-    "z": 1000,
-    "height": 67.5,
-    "width": 120,
-    "tabOrder": 1000
+    "x": 316.25,
+    "y": 92.5,
+    "z": 10002,
+    "height": 68.75,
+    "width": 152.5,
+    "tabOrder": 10002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,19 +20,36 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_ModalidadIngreso"
+                      "Entity": "BBDD"
                     }
                   },
-                  "Property": "Grupo"
+                  "Property": "Fecha CompletoConvalidacion"
                 }
               },
-              "queryRef": "dim_ModalidadIngreso.Grupo",
-              "nativeQueryRef": "Modalidad",
-              "active": true,
-              "displayName": "Modalidad"
+              "queryRef": "BBDD.Fecha CompletoConvalidacion",
+              "nativeQueryRef": "Fecha CompletoConvalidacion",
+              "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BBDD"
+                  }
+                },
+                "Property": "Fecha CompletoConvalidacion"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
