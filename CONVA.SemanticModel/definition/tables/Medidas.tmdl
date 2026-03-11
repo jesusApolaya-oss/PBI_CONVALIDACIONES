@@ -40,11 +40,6 @@ table Medidas
 		formatString: 0
 		lineageTag: 51bf76d5-d41d-4103-bc22-6cc6e61fbd62
 
-	measure 'Numerador Avance' =
-			
-			[Pendiente] + [Cerrado]
-		lineageTag: 671c541d-892b-4b5d-b9d2-87ed9e2892be
-
 	measure Pendiente =
 			
 			CALCULATE (
@@ -54,18 +49,6 @@ table Medidas
 			)
 		formatString: 0
 		lineageTag: 6ad14497-5bb3-4959-8edf-a4a9e422e0cb
-
-	measure 'Denominador Avance' =
-			
-			[Total Registros] - [Paquete] - [Ticket]
-		formatString: 0
-		lineageTag: ab255866-68c2-4259-a023-78b474739b07
-
-	measure '% Avance' =
-			
-			DIVIDE ( [Numerador Avance], [Denominador Avance] )
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		lineageTag: 3784acf5-1d00-43ef-82ce-15ea769abecb
 
 	measure '% SLA Dentro' =
 			
@@ -149,100 +132,6 @@ table Medidas
 		formatString: 0
 		lineageTag: aa0b4f9c-102d-436f-aa2c-2637d4f2a76b
 
-	measure 'Dentro (Paquete)' = ```
-			
-			VAR _conteo =
-			    CALCULATE(
-			        COUNTROWS(BBDD),
-			        BBDD[SLA_OFI] = "Dentro",
-			        NOT(ISBLANK(BBDD[Est_prev]))   -- 🔹 Solo filas donde Est_prev tiene valor
-			    )
-			RETURN
-			IF(ISBLANK(_conteo), 0, _conteo)
-			
-			```
-		formatString: 0
-		lineageTag: b6b436bf-7b64-4176-af2d-b184ee5af01d
-
-	measure 'Responsables Únicos' = ```
-			
-			DISTINCTCOUNT(Responsables[Responsables])
-			
-			```
-		formatString: 0
-		displayFolder: Productividad
-		lineageTag: bd153aab-9335-48ee-a01d-567ca7860615
-
-	measure Ratios =
-			
-			DIVIDE(
-			    [Estado Cerrado],
-			    [Responsables Únicos],
-			    0
-			)
-		displayFolder: Productividad
-		lineageTag: ea84dab5-a757-443c-a127-2dad34879084
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure '% Ratios' =
-			
-			DIVIDE(
-			    [Estado Cerrado],
-			    [Responsables Únicos],
-			    0
-			)
-		formatString: 0\ %;-0\ %;0\ %
-		displayFolder: Productividad
-		lineageTag: 7e6b9ec1-56af-40e2-ae80-a7ed2f2468c0
-
-	measure 'Estado Cerrado' = ```
-			
-			COUNTROWS (
-			    FILTER (
-			        BBDD,
-			        NOT ISBLANK ( BBDD[ResponsableConvalidacion] )
-			    )
-			)
-			
-			```
-		formatString: 0
-		displayFolder: Productividad
-		lineageTag: 5bfd8650-f92a-45a7-b274-54ebdf263661
-
-	measure 'Convalidaciones Completadas' = ```
-			
-			CALCULATE (
-			    COUNT ( BBDD[ResponsableConvalidacion] ),
-			    NOT ISBLANK ( BBDD[FechaCompletoConvalidacion] )
-			)
-			
-			```
-		formatString: 0
-		displayFolder: Productividad 2.0
-		lineageTag: 51b3d827-a4f9-4d58-9297-cbddacd727ea
-
-	measure 'Total Convalidaciones' = ```
-			COUNTROWS ( BBDD )
-			
-			```
-		formatString: 0
-		displayFolder: Productividad 2.0
-		lineageTag: 8e690091-056f-4e04-94b8-b599c52f31c9
-
-	measure 'Productividad (%)' = ```
-			
-			DIVIDE (
-			    [Convalidaciones Completadas],
-			    [Total Convalidaciones],
-			    0
-			)
-			
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Productividad 2.0
-		lineageTag: f2771d6c-c111-4a0b-be89-882ab8f184eb
-
 	measure 'Total por Responsable' = ```
 			
 			COUNT ( BBDD[Codigo] )
@@ -251,15 +140,6 @@ table Medidas
 		formatString: 0
 		displayFolder: Productividad 2.0
 		lineageTag: 114b0ffd-d496-43fd-8885-a254dd2a47fa
-
-	measure 'Total Responsables con Nombre' = ```
-			
-			COUNT ( BBDD[ResponsableConvalidacion] )
-			
-			```
-		formatString: 0
-		displayFolder: Productividad 2.0
-		lineageTag: dc6fae0b-5ed1-4186-8b17-52dcbc6b9931
 
 	measure Paquetes = ```
 			

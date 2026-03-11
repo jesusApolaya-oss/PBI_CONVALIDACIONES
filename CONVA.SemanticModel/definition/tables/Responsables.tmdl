@@ -100,27 +100,6 @@ table Responsables
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Día Actual' = ```
-			
-			VAR Hoy = WEEKDAY(TODAY(), 2)   -- 1=Lunes, 7=Domingo
-			RETURN
-			SWITCH(
-			    Hoy,
-			    1, "Lun",
-			    2, "Mar",
-			    3, "Mié",
-			    4, "Jue",
-			    5, "Vie",
-			    6, "Sáb",
-			    7, "Dom"
-			)
-			
-			```
-		lineageTag: 8f53c849-daec-4a16-ac34-d524851936f7
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	column Momento
 		dataType: string
 		lineageTag: ccf4d5d1-9582-4fd1-a18a-79c6e90b019d

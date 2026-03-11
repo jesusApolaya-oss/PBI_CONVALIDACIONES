@@ -2510,22 +2510,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "medida.numerador_avance": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Numerador Avance"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "numerador avance": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medida.pendiente": {
 			      "Definition": {
 			        "Binding": {
@@ -2538,58 +2522,6 @@ cultureInfo es-MX
 			        {
 			          "pendiente": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.denominador_avance": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Denominador Avance"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "denominador avance": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.avance": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Avance"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% avance": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage avance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "pct avance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -3707,29 +3639,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "bbdd.volumen": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BBDD",
-			          "ConceptualProperty": "Volumen"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "volumen": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "medida.SLA_fuera": {
 			      "Definition": {
 			        "Binding": {
@@ -4182,28 +4091,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "medida.dentro_paquete": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Dentro (Paquete)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dentro (paquete)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "dentro": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "responsable": {
 			      "Definition": {
 			        "Binding": {
@@ -4411,68 +4298,6 @@ cultureInfo es-MX
 			      "Terms": [
 			        {
 			          "hora": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "responsable.día_actual": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Responsables",
-			          "ConceptualProperty": "Día Actual"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "día actual": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "día real": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "día existent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "día tangible": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
-			    "bbdd.sla_new": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BBDD",
-			          "ConceptualProperty": "SLA NEW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sla new": {
 			            "State": "Generated"
 			          }
 			        }
@@ -4776,74 +4601,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "medida.responsables_únicos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Responsables Únicos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "responsables únicos": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratios": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratios"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratios": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratios1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Ratios"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% ratios": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage ratio": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "pct ratio": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
 			    "bbdd.tipo_paquete": {
 			      "Definition": {
 			        "Binding": {
@@ -4876,22 +4633,6 @@ cultureInfo es-MX
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "medida.estado_cerrado": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Estado Cerrado"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "estado cerrado": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -5656,83 +5397,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "medida.convalidaciones_completadas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Convalidaciones Completadas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "convalidaciones completadas": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.total_convalidaciones": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Total Convalidaciones"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total convalidaciones": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aggregate convalidacione": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "overall convalidacione": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "medida.productividad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Productividad (%)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "productividad": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "productividad (%)": {
-			            "State": "Generated"
-			          }
-			        }
-			      ],
-			      "Units": [
-			        "percentage",
-			        "%"
-			      ]
-			    },
 			    "medida.total_por_responsable": {
 			      "Definition": {
 			        "Binding": {
@@ -5765,42 +5429,6 @@ cultureInfo es-MX
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "medida.total_responsables_con_nombre": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Total Responsables con Nombre"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total responsables con nombre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aggregate responsable con nombre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "overall responsable con nombre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -6344,59 +5972,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "bbdd.fecha_modificación_nom_dia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BBDD",
-			          "ConceptualProperty": "Fecha_ModificaciónNomDia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha modificación nom dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fecha_ModificaciónNomDia": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "bbdd.fecha_orden": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BBDD",
-			          "ConceptualProperty": "Fecha_Orden"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha orden": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fecha_Orden": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "conva_histo.tipo_paquete": {
 			      "Definition": {
 			        "Binding": {
@@ -6501,29 +6076,6 @@ cultureInfo es-MX
 			        }
 			      ]
 			    },
-			    "bbdd.sem_ingreso": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "BBDD",
-			          "ConceptualProperty": "SemIngreso"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sem ingreso": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SemIngreso": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "medida.paquetes": {
 			      "Definition": {
 			        "Binding": {
@@ -6575,66 +6127,6 @@ cultureInfo es-MX
 			          }
 			        }
 			      ]
-			    },
-			    "conva_histo.fecha_inicio_semana": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Conva_Histo",
-			          "ConceptualProperty": "Fecha_Inicio_Semana"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha inicio semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fecha_Inicio_Semana": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "conva_histo.fecha_cierre_semana": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Conva_Histo",
-			          "ConceptualProperty": "Fecha_Cierre_Semana"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "fecha cierre semana": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Fecha_Cierre_Semana": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
 			    },
 			    "conva_histo.est_prev": {
 			      "Definition": {

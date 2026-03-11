@@ -360,39 +360,6 @@ table Conva_Histo
 
 		annotation SummarizationSetBy = Automatic
 
-	column Fecha_Inicio_Semana =
-			
-			VAR _Fecha = Conva_Histo[Fecha_Recep]
-			VAR _DiaSemana = WEEKDAY(_Fecha, 2)   -- 2 = lunes=1, domingo=7
-			RETURN
-			    _Fecha - (_DiaSemana - 1)
-		dataType: dateTime
-		formatString: Short Date
-		lineageTag: 449713cd-4278-454a-a52f-c69e9bebbf7f
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-	column Fecha_Cierre_Semana =
-			
-			VAR _Fecha = Conva_Histo[Fecha_Recep]
-			VAR _DiaSemana = WEEKDAY(_Fecha, 2)     -- lunes=1, domingo=7
-			RETURN
-			    _Fecha + (7 - _DiaSemana)
-		formatString: Short Date
-		lineageTag: 45ff87e6-85bd-4cc6-8dd5-6a8fc1195216
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column Est_prev =
 			
 			VAR modalidad = Conva_Histo[ModalidadIngreso]

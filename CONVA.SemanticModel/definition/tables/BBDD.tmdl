@@ -482,34 +482,6 @@ table BBDD
 
 		annotation SummarizationSetBy = Automatic
 
-	column Volumen = ```
-			
-			VAR _fcc_text =
-			    TRIM( SUBSTITUTE( BBDD[FechaCompletoConvalidacion] & "", UNICHAR(160), " " ) )
-			VAR _fr_text  =
-			    TRIM( SUBSTITUTE( BBDD[Fecha_Recep] & "", UNICHAR(160), " " ) )
-			
-			-- Intenta convertir a fecha (si tu dato es "fecha y hora", usa DATETIMEVALUE en vez de DATEVALUE)
-			VAR _fcc_date =
-			    IF( _fcc_text <> "", DATEVALUE( _fcc_text ), BLANK() )
-			
-			VAR _fr_date  =
-			    IF( _fr_text <> "", DATEVALUE( _fr_text ), BLANK() )
-			
-			RETURN
-			COALESCE( _fcc_date, _fr_date )
-			
-			```
-		formatString: Long Date
-		lineageTag: e1f3aab2-ebcf-4c42-a628-472e6cdb8215
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column 'Campaña.ID Campaña'
 		dataType: int64
 		formatString: 0
@@ -633,17 +605,6 @@ table BBDD
 			```
 		formatString: General Date
 		lineageTag: 56179099-b514-4084-bf53-843c38c01398
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'SLA NEW' =
-			
-			VAR limite = BBDD[Fecha_Limite_SLA]
-			VAR cierre = BBDD[FechaCompletoConvalidacion]
-			VAR referencia = IF( NOT ISBLANK(cierre), cierre, NOW() )
-			RETURN IF( ISBLANK(limite), BLANK(), IF( referencia <= limite, "DENTRO", "FUERA" ) )
-		lineageTag: c12d9c43-8b38-45e6-9e1b-3fc564bb9ec0
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
@@ -789,42 +750,6 @@ table BBDD
 
 		annotation SummarizationSetBy = Automatic
 
-	column Fecha_ModificaciónNomDia = ```
-			
-			VAR _fecha = DATEVALUE( BBDD[FechaDia] )
-			RETURN
-			IF(
-			    ISBLANK(_fecha),
-			    BLANK(),
-			    FORMAT(_fecha, "dd/MM/yy")
-			)
-			
-			```
-		dataType: string
-		lineageTag: c595d93a-64e4-41c4-9832-3d5896c4d6e5
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = Automatic
-
-	column Fecha_Orden = ```
-			
-			DATEVALUE( BBDD[FechaDia] )
-			
-			```
-		formatString: Short Date
-		lineageTag: 18db1f56-bc8f-4b48-9e79-54b51c849cdc
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		changedProperty = SortByColumn
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column SemCompletado = ```
 			
 			VAR _Anio   = YEAR(BBDD[FechaCompletoConvalidacion])
@@ -834,16 +759,6 @@ table BBDD
 			
 			```
 		lineageTag: d679cb39-4dba-4076-b5d7-582346a67e6d
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column SemIngreso =
-			
-			VAR _Semana = WEEKNUM(BBDD[Fecha_Recep], 2)  // 2 = la semana empieza en lunes
-			RETURN
-			"S" & FORMAT(_Semana, "00")
-		lineageTag: 66fe71fc-363c-4840-84c6-6891eac343a3
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
