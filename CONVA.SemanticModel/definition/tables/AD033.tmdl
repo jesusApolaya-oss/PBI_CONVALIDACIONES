@@ -2,14 +2,12 @@ table AD033
 	lineageTag: ffcbdc15-8c71-41a3-bc55-e29f6725af20
 
 	column PERIODO
-		dataType: double
+		dataType: string
 		lineageTag: 0f7381c7-62a3-4843-81cb-5ef67fe92b8b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: PERIODO
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column CAMPUS
 		dataType: string
@@ -92,14 +90,12 @@ table AD033
 		annotation SummarizationSetBy = Automatic
 
 	column 'PERIODO ATRIBUTO'
-		dataType: double
+		dataType: string
 		lineageTag: 1083394b-b8a4-4476-8786-68cbde66269b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: PERIODO ATRIBUTO
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ATRIBUTOS
 		dataType: string
@@ -110,7 +106,8 @@ table AD033
 		annotation SummarizationSetBy = Automatic
 
 	column 'FECHA APROB DOC CURSOS'
-		dataType: string
+		dataType: dateTime
+		formatString: General Date
 		lineageTag: 341bc5d5-d01b-4428-ba18-69e9c1002ba5
 		summarizeBy: none
 		sourceColumn: FECHA APROB DOC CURSOS
